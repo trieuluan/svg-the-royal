@@ -12,15 +12,8 @@ export default function FirstLabel(props: FirstLabelProps): JSX.Element {
       viewBox="0 0 653.98 72.793"
       {...props}
     >
-      <g
-        className={"pointable"}
-        onMouseEnter={() => setContent("first")}
-        onMouseLeave={() => setContent("")}
-        transform="translate(-162.422 -3941.38)"
-      >
+      <g transform="translate(-162.422 -3941.38)">
         <path
-          id="Path_1277"
-          data-name="Path 1277"
           d="M772.459,4013.174H163.422V3942.38H772.459l42.382,35.4Z"
           fill="#606060"
           stroke="#707070"
@@ -77,6 +70,17 @@ export default function FirstLabel(props: FirstLabelProps): JSX.Element {
             28-29
           </tspan>
         </text>
+        <path
+          d="M772.459,4013.174H163.422V3942.38H772.459l42.382,35.4Z"
+          fill="#606060"
+          stroke="#707070"
+          stroke-miterlimit="10"
+          stroke-width="15"
+          opacity={0.01}
+          className={"pointable"}
+          onMouseEnter={() => setContent("first")}
+          onMouseLeave={() => setContent("")}
+        />
       </g>
     </SvgIcon>
   );

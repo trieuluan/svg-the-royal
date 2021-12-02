@@ -39,7 +39,9 @@ export default function SecondSlide(props: SecondSlideProps): JSX.Element {
       <Box
         sx={{
           "& >*": { position: "absolute" },
-          "& .pointable": { cursor: "pointer" },
+          "& .pointable": {
+            cursor: "pointer",
+          },
         }}
       >
         <img src={background} />

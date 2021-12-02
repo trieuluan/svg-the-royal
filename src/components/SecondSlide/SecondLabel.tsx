@@ -7,12 +7,7 @@ export default function SecondLabel(props: SecondLabelProps): JSX.Element {
   const [content, setContent] = useContext(SlideContext);
   return (
     <SvgIcon viewBox="0 0 653.98 72.794" {...props}>
-      <g
-        className={"pointable"}
-        onMouseEnter={() => setContent("second")}
-        onMouseLeave={() => setContent("")}
-        transform="translate(-162.422 -4038.488)"
-      >
+      <g transform="translate(-162.422 -4038.488)">
         <path
           id="Path_1278"
           data-name="Path 1278"
@@ -72,6 +67,19 @@ export default function SecondLabel(props: SecondLabelProps): JSX.Element {
             22-27
           </tspan>
         </text>
+        <path
+          id="Path_1278"
+          data-name="Path 1278"
+          d="M772.459,4110.281H163.422v-70.794H772.459l42.382,35.4Z"
+          fill="#606060"
+          stroke="#707070"
+          stroke-miterlimit="10"
+          stroke-width="15"
+          opacity={0.01}
+          className={"pointable"}
+          onMouseEnter={() => setContent("second")}
+          onMouseLeave={() => setContent("")}
+        />
       </g>
     </SvgIcon>
   );
