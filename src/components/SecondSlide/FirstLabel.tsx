@@ -1,46 +1,61 @@
 import { SvgIcon, SvgIconProps } from "@mui/material";
-import { useContext } from "react";
-import { SlideContext } from "./Context";
+import { useSlideContext } from "./Context";
+import Defs from "./Defs";
 
 type FirstLabelProps = SvgIconProps;
+
 export default function FirstLabel(props: FirstLabelProps): JSX.Element {
-  const [content, setContent] = useContext(SlideContext);
+  const { labelPathProps, labelProps } = useSlideContext("first");
   return (
-    <SvgIcon
-      width="653.98"
-      height="72.793"
-      viewBox="0 0 653.98 72.793"
-      {...props}
-    >
-      <g transform="translate(-162.422 -3941.38)">
+    <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
+      <Defs />
+      <g
+        id="Group_536"
+        data-name="Group 536"
+        transform="translate(-179 -231)"
+        {...labelProps}
+      >
         <path
-          d="M772.459,4013.174H163.422V3942.38H772.459l42.382,35.4Z"
-          fill="#606060"
-          stroke="#707070"
-          stroke-miterlimit="10"
-          stroke-width="2"
-          opacity={content === "first" ? 1 : 0.3}
+          id="Path_1665"
+          data-name="Path 1665"
+          d="M0,0,610.191.412l41.621,34.76L612.27,70.783,0,71Z"
+          transform="translate(179 231)"
+          {...labelPathProps}
         />
         <text
           id="Đỉnh_Sống_Hoàng_Kim"
           data-name="Đỉnh Sống Hoàng Kim"
-          transform="translate(192.629 3997.279)"
-          fill="#fff"
+          transform="translate(213.629 282.278)"
           font-size="21.798"
-          font-family="Montserrat-SemiBold, Montserrat"
+          font-family="Raleway-SemiBold, Raleway"
           font-weight="600"
         >
           <tspan x="0" y="0">
-            Đỉnh Sống Hoàng Kim
+            Đ
           </tspan>
+          <tspan
+            y="0"
+            font-family="Helvetica-Bold, Helvetica"
+            font-weight="700"
+          >
+            ỉ
+          </tspan>
+          <tspan y="0">nh S</tspan>
+          <tspan
+            y="0"
+            font-family="Helvetica-Bold, Helvetica"
+            font-weight="700"
+          >
+            ố
+          </tspan>
+          <tspan y="0">ng Hoàng Kim</tspan>
         </text>
         <text
           id="SAINT_PAUL_S_GARDEN"
           data-name="SAINT PAUL’S GARDEN"
-          transform="translate(193.951 3971.706)"
-          fill="#fff"
+          transform="translate(214.951 256.706)"
           font-size="14.746"
-          font-family="Montserrat-Regular, Montserrat"
+          font-family="Raleway"
         >
           <tspan x="0" y="0">
             SAINT PAUL’S GARDEN
@@ -48,20 +63,22 @@ export default function FirstLabel(props: FirstLabelProps): JSX.Element {
         </text>
         <text
           id="TẦNG"
-          transform="translate(679.72 3971.706)"
-          fill="#fff"
+          transform="translate(695.721 256.706)"
           font-size="14.746"
-          font-family="Montserrat-Regular, Montserrat"
+          font-family="Raleway"
         >
           <tspan x="0" y="0">
-            TẦNG
+            T
           </tspan>
+          <tspan y="0" font-family="Helvetica">
+            Ầ
+          </tspan>
+          <tspan y="0">NG</tspan>
         </text>
         <text
           id="_28-29"
           data-name="28-29"
-          transform="translate(670.699 3997.279)"
-          fill="#fff"
+          transform="translate(686.699 282.278)"
           font-size="21.798"
           font-family="Montserrat-SemiBold, Montserrat"
           font-weight="600"
@@ -70,17 +87,6 @@ export default function FirstLabel(props: FirstLabelProps): JSX.Element {
             28-29
           </tspan>
         </text>
-        <path
-          d="M772.459,4013.174H163.422V3942.38H772.459l42.382,35.4Z"
-          fill="#606060"
-          stroke="#707070"
-          stroke-miterlimit="10"
-          stroke-width="15"
-          opacity={0.01}
-          className={"pointable"}
-          onMouseEnter={() => setContent("first")}
-          onMouseLeave={() => setContent("")}
-        />
       </g>
     </SvgIcon>
   );

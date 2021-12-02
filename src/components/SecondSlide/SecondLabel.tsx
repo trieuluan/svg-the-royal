@@ -1,28 +1,30 @@
 import { SvgIcon, SvgIconProps } from "@mui/material";
-import { useContext } from "react";
-import { SlideContext } from "./Context";
+import { useSlideContext } from "./Context";
+import Defs from "./Defs";
 
 type SecondLabelProps = SvgIconProps;
 export default function SecondLabel(props: SecondLabelProps): JSX.Element {
-  const [content, setContent] = useContext(SlideContext);
+  const { labelPathProps, labelProps } = useSlideContext("second");
   return (
-    <SvgIcon viewBox="0 0 653.98 72.794" {...props}>
-      <g transform="translate(-162.422 -4038.488)">
+    <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
+      <Defs />
+      <g
+        id="Group_545"
+        data-name="Group 545"
+        transform="translate(-179 -324)"
+        {...labelProps}
+      >
         <path
-          id="Path_1278"
-          data-name="Path 1278"
-          d="M772.459,4110.281H163.422v-70.794H772.459l42.382,35.4Z"
-          fill="#606060"
-          stroke="#707070"
-          stroke-miterlimit="10"
-          stroke-width="2"
-          opacity={content === "second" ? 1 : 0.3}
+          id="Path_1673"
+          data-name="Path 1673"
+          d="M0,0,610.191.412l41.621,34.76L612.27,70.783,0,71Z"
+          transform="translate(179 324)"
+          {...labelPathProps}
         />
         <text
           id="Dịch_Vụ_Hoàng_Kim"
           data-name="Dịch Vụ Hoàng Kim"
-          transform="translate(193.29 4093.002)"
-          fill="#fff"
+          transform="translate(209.29 378.002)"
           font-size="21.798"
           font-family="Montserrat-SemiBold, Montserrat"
           font-weight="600"
@@ -34,8 +36,7 @@ export default function SecondLabel(props: SecondLabelProps): JSX.Element {
         <text
           id="BEST_WESTERN_LUXURY_HOTEL"
           data-name="BEST WESTERN LUXURY HOTEL"
-          transform="translate(193.29 4067.43)"
-          fill="#fff"
+          transform="translate(209.29 352.43)"
           font-size="14.746"
           font-family="Montserrat-Regular, Montserrat"
         >
@@ -45,8 +46,7 @@ export default function SecondLabel(props: SecondLabelProps): JSX.Element {
         </text>
         <text
           id="TẦNG"
-          transform="translate(679.72 4070.011)"
-          fill="#fff"
+          transform="translate(695.72 355.011)"
           font-size="14.746"
           font-family="Montserrat-Regular, Montserrat"
         >
@@ -57,8 +57,7 @@ export default function SecondLabel(props: SecondLabelProps): JSX.Element {
         <text
           id="_22-27"
           data-name="22-27"
-          transform="translate(669.225 4095.583)"
-          fill="#fff"
+          transform="translate(685.225 380.583)"
           font-size="21.798"
           font-family="Montserrat-SemiBold, Montserrat"
           font-weight="600"
@@ -67,19 +66,6 @@ export default function SecondLabel(props: SecondLabelProps): JSX.Element {
             22-27
           </tspan>
         </text>
-        <path
-          id="Path_1278"
-          data-name="Path 1278"
-          d="M772.459,4110.281H163.422v-70.794H772.459l42.382,35.4Z"
-          fill="#606060"
-          stroke="#707070"
-          stroke-miterlimit="10"
-          stroke-width="15"
-          opacity={0.01}
-          className={"pointable"}
-          onMouseEnter={() => setContent("second")}
-          onMouseLeave={() => setContent("")}
-        />
       </g>
     </SvgIcon>
   );

@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { SlideContext } from "./Context";
 import { motionCircleDraw, motionLineDraw, MotionSvgIcon } from "./common";
 import { AnimatePresence, motion } from "framer-motion";
+import Defs from "./Defs";
 
 type FirstLineProps = SvgIconProps;
 
@@ -17,6 +18,7 @@ export default function FirstLine(props: FirstLineProps): JSX.Element {
           initial="hidden"
           animate="visible"
         >
+          <Defs />
           <motion.g
             id="Group_306"
             data-name="Group 306"
@@ -30,7 +32,7 @@ export default function FirstLine(props: FirstLineProps): JSX.Element {
               x1={0}
               x2={432}
               transform="translate(797.5 4282.5)"
-              stroke="#707070"
+              stroke="url(#line)"
               stroke-miterlimit="10"
               stroke-width="1.91"
               variants={motionLineDraw}

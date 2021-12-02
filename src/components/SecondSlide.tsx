@@ -46,14 +46,14 @@ export default function SecondSlide(props: SecondSlideProps): JSX.Element {
       >
         <img src={background} />
         <SlideContext.Provider value={[content, setContent]}>
-          <FirstLabel
-            sx={{
-              ...tlwh(227.38, 179.42, 651.42, 70.79),
-            }}
-          />
           <FirstLine
             sx={{
               ...tlwh(245.54, 810, 442.07, 20),
+            }}
+          />
+          <FirstLabel
+            sx={{
+              ...tlwh(227.38, 179.42, 651.813, 71),
             }}
           />
           <FirstArea sx={{ ...tlwh(109.28, 1269.06, 339.76, 153.04) }} />
