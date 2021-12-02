@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import SecondSlide from "./components/SecondSlide";
+import WebFont from "webfontloader";
 
 function App() {
-  return (
-    <SecondSlide/>
-  );
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ["Montserrat"],
+      },
+    });
+  }, []);
+  return <SecondSlide />;
 }
 
 export default App;

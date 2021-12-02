@@ -53,12 +53,12 @@ export default function SecondSlide(props: SecondSlideProps): JSX.Element {
           />
           <FirstLine
             sx={{
-              ...tlwh(245.54, 813.5, 442.07, 20),
+              ...tlwh(245.54, 810, 442.07, 20),
             }}
           />
           <FirstArea sx={{ ...tlwh(109.28, 1269.06, 339.76, 153.04) }} />
           <SecondLabel sx={tlwh(324.49, 179.42, 651.42, 70.79)} />
-          <SecondLine sx={{ ...tlwh(326.54, 817.5, 438.07, 32.96) }} />
+          <SecondLine sx={{ ...tlwh(327.54, 810, 438.07, 32.96) }} />
           <SecondArea sx={{ ...tlwh(137.91, 1263.64, 358.31, 248.97) }} />
         </SlideContext.Provider>
       </Box>

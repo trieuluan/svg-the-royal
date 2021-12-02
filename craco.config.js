@@ -15,5 +15,16 @@ module.exports = {
     alias: {
       "@mui/styled-engine": "@mui/styled-engine-sc",
     },
+    configure: {
+      module: {
+        rules: [
+          {
+            type: "javascript/auto",
+            test: /\.mjs$/,
+            include: /node_modules/,
+          },
+        ],
+      },
+    },
   },
 };
