@@ -13,6 +13,16 @@ import SecondArea from "./SecondSlide/SecondArea";
 import ThirdLabel from "./SecondSlide/ThirdLabel";
 import ThirdLine from "./SecondSlide/ThirdLine";
 import ThirdArea from "./SecondSlide/ThirdArea";
+import FourthLabel from "./SecondSlide/FourthLabel";
+import FourthLine from "./SecondSlide/FourthLine";
+import FourthArea from "./SecondSlide/FourthArea";
+import FifthLabel from "./SecondSlide/FifthLabel";
+import FifthLine from "./SecondSlide/FifthLine";
+import FifthArea from "./SecondSlide/FifthArea";
+import SixthLabel from "./SecondSlide/SixthLabel";
+import SixthLine from "./SecondSlide/SixthLine";
+import SixthArea from "./SecondSlide/SixthArea";
+import { SlideLabel } from "./SecondSlide/common";
 // import part1 from './Slide2Part1.svg';
 
 const getXSize = (w: number) => `${w / 19.1984}%`,
@@ -48,6 +58,7 @@ export default function SecondSlide(props: SecondSlideProps): JSX.Element {
         }}
       >
         <img src={background} />
+        <SlideLabel sx={tlwh(55.78, 179.42, 611.88, 134.67)} />
         <SlideContext.Provider value={[content, setContent]}>
           <FirstLine
             sx={{
@@ -68,6 +79,18 @@ export default function SecondSlide(props: SecondSlideProps): JSX.Element {
           <ThirdLine sx={tlwh(450.69, 828.23, 428.34, 130.85)} />
           <ThirdLabel sx={tlwh(416, 179, 651.81, 71)} />
           <ThirdArea sx={tlwh(293.98, 1260.45, 361.46, 423.15)} />
+
+          <FourthLine sx={tlwh(540.5, 824.12, 437.45, 202.04)} />
+          <FourthLabel sx={tlwh(507, 179, 651.81, 71)} />
+          <FourthArea sx={tlwh(705.35, 1265.35, 357.75, 50.44)} />
+
+          <FifthLine sx={tlwh(635.81, 826.78, 435.79, 156.72)} />
+          <FifthLabel sx={tlwh(601, 179, 651.81, 81.58)} />
+          <FifthArea sx={tlwh(755.35, 1265.92, 352.41, 66.36)} />
+
+          <SixthLine sx={tlwh(730.79, 829, 427.57, 116.75)} />
+          <SixthLabel sx={tlwh(696, 179, 651.81, 71)} />
+          <SixthArea sx={tlwh(813.97, 1268.65, 347.97, 100.64)} />
         </SlideContext.Provider>
       </Box>
     </AspectRatio>

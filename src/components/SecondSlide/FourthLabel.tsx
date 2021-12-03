@@ -1,29 +1,31 @@
 import { SvgIcon, SvgIconProps } from "@mui/material";
+import { useSlideContext } from "./Context";
+import Defs from "./Defs";
 
 type FourthLabelProps = SvgIconProps;
 export default function FourthLabel(props: FourthLabelProps): JSX.Element {
+  const { labelPathProps, labelProps } = useSlideContext("fourth");
+
   return (
-    <SvgIcon viewBox="0 0 653.98 72.794" {...props}>
+    <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
+      <Defs />
       <g
-        id="Group_8"
-        data-name="Group 8"
-        transform="translate(-162.422 -4227.191)"
+        id="Group_565"
+        data-name="Group 565"
+        transform="translate(-179 -507)"
+        {...labelProps}
       >
         <path
-          id="Path_1280"
-          data-name="Path 1280"
-          d="M772.459,4298.985H163.422v-70.794H772.459l42.382,35.4Z"
-          fill="#606060"
-          stroke="#707070"
-          stroke-miterlimit="10"
-          stroke-width="2"
-          opacity="0.3"
+          id="Path_1685"
+          data-name="Path 1685"
+          d="M0,0,610.191.412l41.621,34.76L612.27,70.783,0,71Z"
+          transform="translate(179 507)"
+          {...labelPathProps}
         />
         <text
           id="Tiện_Nghi_Hoàng_Kim"
           data-name="Tiện Nghi Hoàng Kim"
-          transform="translate(192.63 4278.583)"
-          fill="#fff"
+          transform="translate(208.63 556.583)"
           font-size="21.798"
           font-family="Montserrat-SemiBold, Montserrat"
           font-weight="600"
@@ -35,8 +37,7 @@ export default function FourthLabel(props: FourthLabelProps): JSX.Element {
         <text
           id="LUXURY_FACITIES"
           data-name="LUXURY FACITIES"
-          transform="translate(191.65 4253.011)"
-          fill="#fff"
+          transform="translate(207.65 531.011)"
           font-size="14.746"
           font-family="Montserrat-Regular, Montserrat"
         >
@@ -46,8 +47,7 @@ export default function FourthLabel(props: FourthLabelProps): JSX.Element {
         </text>
         <text
           id="TẦNG"
-          transform="translate(679.72 4253.01)"
-          fill="#fff"
+          transform="translate(695.72 531.01)"
           font-size="14.746"
           font-family="Montserrat-Regular, Montserrat"
         >
@@ -58,8 +58,7 @@ export default function FourthLabel(props: FourthLabelProps): JSX.Element {
         <text
           id="_03-04"
           data-name="03-04"
-          transform="translate(669.225 4278.583)"
-          fill="#fff"
+          transform="translate(685.225 556.583)"
           font-size="21.798"
           font-family="Montserrat-SemiBold, Montserrat"
           font-weight="600"

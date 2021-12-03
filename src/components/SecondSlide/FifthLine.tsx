@@ -5,57 +5,58 @@ import { AnimatePresence, motion } from "framer-motion";
 import { motionCircleDraw, motionLineDraw, MotionSvgIcon } from "./common";
 import Defs from "./Defs";
 
-type ThirdLineProps = SvgIconProps;
-export default function ThirdLine(props: ThirdLineProps): JSX.Element {
+type FifthLineProps = SvgIconProps;
+export default function FifthLine(props: FifthLineProps): JSX.Element {
   const [content, setContent] = useContext(SlideContext);
   return (
     <AnimatePresence>
-      {content === "third" && (
+      {content === "fifth" && (
         <MotionSvgIcon
-          width="428.475"
-          height="131.329"
-          viewBox="0 0 428.475 131.329"
+          width="436.11"
+          height="157.67"
+          viewBox="0 0 436.11 157.67"
           {...props}
           initial="hidden"
           animate="visible"
         >
           <Defs />
           <motion.g
-            id="Group_578"
-            data-name="Group 578"
-            transform="translate(-828.096 -450.208)"
+            id="Group_580"
+            data-name="Group 580"
+            transform="translate(-826.461 -634.867)"
           >
             <motion.path
-              variants={motionLineDraw}
-              id="Path_1691"
-              data-name="Path 1691"
-              d="M-.266-.812,412,118"
-              transform="translate(828.5 451.5)"
+              id="Path_1696"
+              data-name="Path 1696"
+              d="M3009.783,3947.813l420.341,143.276"
+              transform="translate(-2183 -3312)"
               fill="none"
-              stroke="#c79b3a"
-              stroke-width="1"
+              stroke="#c89c3c"
+              stroke-width="2"
+              variants={motionLineDraw}
             />
             <motion.g
               variants={motionCircleDraw}
-              id="Group_539"
-              data-name="Group 539"
+              id="Group_535"
+              data-name="Group 535"
+              transform="translate(0 48)"
             >
               <circle
-                id="Ellipse_98"
-                data-name="Ellipse 98"
+                id="Ellipse_103"
+                data-name="Ellipse 103"
                 cx="12"
                 cy="12"
                 r="12"
-                transform="translate(1232.57 557.537)"
+                transform="translate(1238.57 720.537)"
                 fill="url(#area)"
               />
               <circle
-                id="Ellipse_22"
-                data-name="Ellipse 22"
+                id="Ellipse_104"
+                data-name="Ellipse 104"
                 cx="10"
                 cy="10"
                 r="10"
-                transform="translate(1234.57 559.537)"
+                transform="translate(1240.57 722.537)"
                 fill="maroon"
               />
             </motion.g>
