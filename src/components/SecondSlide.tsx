@@ -14,9 +14,9 @@ import SecondArea from "./SecondSlide/SecondArea";
 
 const getXSize = (w: number) => `${w / 19.1984}%`,
   getYSize = (h: number) => `${h / 9.2927}%`,
-  tlwh = (t: number, l: number, w: number, h: number) => ({
-    top: getYSize(t),
-    left: getXSize(l),
+  tlwh = (y: number, x: number, w: number, h: number) => ({
+    top: getYSize(y),
+    left: getXSize(x),
     width: getXSize(w),
     height: getYSize(h),
   });
@@ -48,17 +48,17 @@ export default function SecondSlide(props: SecondSlideProps): JSX.Element {
         <SlideContext.Provider value={[content, setContent]}>
           <FirstLine
             sx={{
-              ...tlwh(245.54, 810, 442.07, 20),
+              ...tlwh(238.54, 822.26, 434.31, 27.96),
             }}
           />
           <FirstLabel
             sx={{
-              ...tlwh(227.38, 179.42, 651.813, 71),
+              ...tlwh(231, 179, 651.813, 71),
             }}
           />
-          <FirstArea sx={{ ...tlwh(109.28, 1269.06, 339.76, 153.04) }} />
-          <SecondLabel sx={tlwh(324.49, 179.42, 651.42, 70.79)} />
-          <SecondLine sx={{ ...tlwh(327.54, 810, 438.07, 32.96) }} />
+          <FirstArea sx={{ ...tlwh(109.28, 1270.06, 339.76, 153.04) }} />
+          <SecondLine sx={{ ...tlwh(309.44, 826.4, 430.17, 47) }} />
+          <SecondLabel sx={tlwh(320, 179, 651.81, 71)} />
           <SecondArea sx={{ ...tlwh(137.91, 1263.64, 358.31, 248.97) }} />
         </SlideContext.Provider>
       </Box>
