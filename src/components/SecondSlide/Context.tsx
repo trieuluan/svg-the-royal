@@ -2,6 +2,11 @@ import { createContext, useContext } from "react";
 
 export const SlideContext = createContext<any>(undefined);
 
+const areaVariants = {
+  inactive: { opacity: 0 },
+  active: { opacity: 0.75 },
+};
+
 export const useSlideContext = (id: string) => {
   const [context, setContext] = useContext(SlideContext);
 
@@ -16,10 +21,13 @@ export const useSlideContext = (id: string) => {
       onMouseLeave: () => setContext(""),
     },
     areaProps: {
+      className: "pointable",
       fill: `url(#area)`,
-      opacity: context === id ? 0.75 : 0,
       onMouseEnter: () => setContext(id),
       onMouseLeave: () => setContext(""),
+      variants: areaVariants,
+      animate: context === id ? "active" : "inactive",
+      transition: { duration: 0 },
     },
   };
 };
