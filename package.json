@@ -36,6 +36,7 @@
     "@types/webfontloader": "^1.6.33",
     "craco-alias": "^3.0.1",
     "craco-graphql-loader": "^1.0.1",
+    "craco-image-optimizer-plugin": "0.0.5",
     "prettier": "^2.5.0"
   },
   "scripts": {
