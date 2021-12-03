@@ -1,29 +1,33 @@
 import { SvgIcon, SvgIconProps } from "@mui/material";
+import { useSlideContext } from "./Context";
 
 type ThirdLabelProps = SvgIconProps;
 export default function ThirdLabel(props: ThirdLabelProps): JSX.Element {
+  const { labelPathProps, labelProps } = useSlideContext("third");
   return (
-    <SvgIcon viewBox="0 0 653.98 72.794" {...props}>
+    <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
       <g
-        id="Group_6"
-        data-name="Group 6"
-        transform="translate(-162.422 -4131.291)"
+        id="Group_546"
+        data-name="Group 546"
+        transform="translate(-179 -416)"
+        {...labelProps}
       >
-        <path
-          id="Path_1279"
-          data-name="Path 1279"
-          d="M772.459,4203.084H163.422v-70.794H772.459l42.382,35.4Z"
-          fill="#606060"
-          stroke="#707070"
-          stroke-miterlimit="10"
-          stroke-width="2"
-          opacity="0.3"
-        />
+        <g
+          id="Component_2_2"
+          data-name="Component 2 – 2"
+          transform="translate(179 416)"
+          {...labelPathProps}
+        >
+          <path
+            id="Path_1667"
+            data-name="Path 1667"
+            d="M0,0,610.191.412l41.621,34.76L612.27,70.783,0,71Z"
+          />
+        </g>
         <text
           id="Tiện_Nghi_Hoàng_Kim"
           data-name="Tiện Nghi Hoàng Kim"
-          transform="translate(191.969 4186.271)"
-          fill="#fff"
+          transform="translate(207.969 471.271)"
           font-size="21.798"
           font-family="Montserrat-SemiBold, Montserrat"
           font-weight="600"
@@ -35,8 +39,7 @@ export default function ThirdLabel(props: ThirdLabelProps): JSX.Element {
         <text
           id="ELIZABETH_LUXURY_APARTMENT"
           data-name="ELIZABETH LUXURY APARTMENT"
-          transform="translate(193.29 4160.699)"
-          fill="#fff"
+          transform="translate(209.29 445.699)"
           font-size="14.746"
           font-family="Montserrat-Regular, Montserrat"
         >
@@ -46,8 +49,7 @@ export default function ThirdLabel(props: ThirdLabelProps): JSX.Element {
         </text>
         <text
           id="TẦNG"
-          transform="translate(679.72 4160.699)"
-          fill="#fff"
+          transform="translate(695.72 445.699)"
           font-size="14.746"
           font-family="Montserrat-Regular, Montserrat"
         >
@@ -58,8 +60,7 @@ export default function ThirdLabel(props: ThirdLabelProps): JSX.Element {
         <text
           id="_05-21"
           data-name="05-21"
-          transform="translate(669.225 4186.271)"
-          fill="#fff"
+          transform="translate(685.225 471.271)"
           font-size="21.798"
           font-family="Montserrat-SemiBold, Montserrat"
           font-weight="600"

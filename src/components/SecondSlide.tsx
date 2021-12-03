@@ -10,6 +10,9 @@ import { SlideContext } from "./SecondSlide/Context";
 import { useState } from "react";
 import SecondLine from "./SecondSlide/SecondLine";
 import SecondArea from "./SecondSlide/SecondArea";
+import ThirdLabel from "./SecondSlide/ThirdLabel";
+import ThirdLine from "./SecondSlide/ThirdLine";
+import ThirdArea from "./SecondSlide/ThirdArea";
 // import part1 from './Slide2Part1.svg';
 
 const getXSize = (w: number) => `${w / 19.1984}%`,
@@ -57,9 +60,14 @@ export default function SecondSlide(props: SecondSlideProps): JSX.Element {
             }}
           />
           <FirstArea sx={{ ...tlwh(109.28, 1270.06, 339.76, 153.04) }} />
+
           <SecondLine sx={{ ...tlwh(309.44, 826.4, 430.17, 47) }} />
           <SecondLabel sx={tlwh(320, 179, 651.81, 71)} />
           <SecondArea sx={{ ...tlwh(137.91, 1263.64, 358.31, 248.97) }} />
+
+          <ThirdLine sx={tlwh(450.69, 828.23, 428.34, 130.85)} />
+          <ThirdLabel sx={tlwh(416, 179, 651.81, 71)} />
+          <ThirdArea sx={tlwh(293.98, 1260.45, 361.46, 423.15)} />
         </SlideContext.Provider>
       </Box>
     </AspectRatio>
