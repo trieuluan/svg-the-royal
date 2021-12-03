@@ -1,7 +1,7 @@
 import { SvgIconProps } from "@mui/material";
 import { useContext } from "react";
 import { SlideContext } from "./Context";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { motionCircleDraw, motionLineDraw, MotionSvgIcon } from "./common";
 import Defs from "./Defs";
 
@@ -20,12 +20,12 @@ export default function FourthLine(props: FourthLineProps): JSX.Element {
           animate="visible"
         >
           <Defs />
-          <motion.g
+          <m.g
             id="Group_579"
             data-name="Group 579"
             transform="translate(-824.706 -541.588)"
           >
-            <motion.path
+            <m.path
               variants={motionLineDraw}
               id="Path_1694"
               data-name="Path 1694"
@@ -35,7 +35,7 @@ export default function FourthLine(props: FourthLineProps): JSX.Element {
               stroke="#c79a39"
               stroke-width="2"
             />
-            <motion.g
+            <m.g
               variants={motionCircleDraw}
               id="Group_534"
               data-name="Group 534"
@@ -58,8 +58,8 @@ export default function FourthLine(props: FourthLineProps): JSX.Element {
                 transform="translate(1240.57 722.537)"
                 fill="maroon"
               />
-            </motion.g>
-          </motion.g>
+            </m.g>
+          </m.g>
         </MotionSvgIcon>
       )}
     </AnimatePresence>

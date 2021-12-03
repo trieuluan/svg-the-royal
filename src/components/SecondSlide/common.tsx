@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { SvgIcon, SvgIconProps } from "@mui/material";
 import { ComponentType } from "react";
 
-export const MotionSvgIcon = motion(SvgIcon) as unknown as ComponentType<any>;
+export const MotionSvgIcon = m(SvgIcon) as unknown as ComponentType<any>;
 
 const lineDuration = 0.32;
 export const motionLineDraw = {

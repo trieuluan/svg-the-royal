@@ -1,7 +1,7 @@
 import { SvgIconProps } from "@mui/material";
 import { useContext } from "react";
 import { SlideContext } from "./Context";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { motionCircleDraw, motionLineDraw, MotionSvgIcon } from "./common";
 import Defs from "./Defs";
 
@@ -20,12 +20,12 @@ export default function ThirdLine(props: ThirdLineProps): JSX.Element {
           animate="visible"
         >
           <Defs />
-          <motion.g
+          <m.g
             id="Group_578"
             data-name="Group 578"
             transform="translate(-828.096 -450.208)"
           >
-            <motion.path
+            <m.path
               variants={motionLineDraw}
               id="Path_1691"
               data-name="Path 1691"
@@ -35,7 +35,7 @@ export default function ThirdLine(props: ThirdLineProps): JSX.Element {
               stroke="#c79b3a"
               stroke-width="1"
             />
-            <motion.g
+            <m.g
               variants={motionCircleDraw}
               id="Group_539"
               data-name="Group 539"
@@ -58,8 +58,8 @@ export default function ThirdLine(props: ThirdLineProps): JSX.Element {
                 transform="translate(1234.57 559.537)"
                 fill="maroon"
               />
-            </motion.g>
-          </motion.g>
+            </m.g>
+          </m.g>
         </MotionSvgIcon>
       )}
     </AnimatePresence>

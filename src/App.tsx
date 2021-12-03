@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import SecondSlide from "./components/SecondSlide";
 import WebFont from "webfontloader";
+import { domAnimation, LazyMotion } from "framer-motion";
 
 function App() {
   useEffect(() => {
@@ -10,7 +11,11 @@ function App() {
       },
     });
   }, []);
-  return <SecondSlide />;
+  return (
+    <LazyMotion features={domAnimation}>
+      <SecondSlide />
+    </LazyMotion>
+  );
 }
 
 export default App;

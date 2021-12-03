@@ -1,7 +1,7 @@
 import { SvgIconProps } from "@mui/material";
 import { useContext } from "react";
 import { SlideContext } from "./Context";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { motionCircleDraw, motionLineDraw, MotionSvgIcon } from "./common";
 import Defs from "./Defs";
 
@@ -20,12 +20,12 @@ export default function FifthLine(props: FifthLineProps): JSX.Element {
           animate="visible"
         >
           <Defs />
-          <motion.g
+          <m.g
             id="Group_580"
             data-name="Group 580"
             transform="translate(-826.461 -634.867)"
           >
-            <motion.path
+            <m.path
               id="Path_1696"
               data-name="Path 1696"
               d="M3009.783,3947.813l420.341,143.276"
@@ -35,7 +35,7 @@ export default function FifthLine(props: FifthLineProps): JSX.Element {
               stroke-width="2"
               variants={motionLineDraw}
             />
-            <motion.g
+            <m.g
               variants={motionCircleDraw}
               id="Group_535"
               data-name="Group 535"
@@ -59,8 +59,8 @@ export default function FifthLine(props: FifthLineProps): JSX.Element {
                 transform="translate(1240.57 722.537)"
                 fill="maroon"
               />
-            </motion.g>
-          </motion.g>
+            </m.g>
+          </m.g>
         </MotionSvgIcon>
       )}
     </AnimatePresence>
