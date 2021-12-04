@@ -57,26 +57,22 @@ export default function SecondSlide(props: SecondSlideProps): JSX.Element {
         <SlideContext.Provider value={[content, setContent]}>
           <FirstLine
             sx={{
-              ...tlwh(238.54, 822.26, 434.31, 27.96),
+              ...tlwh(235.54, 822.26, 434.31, 27.96),
             }}
           />
-          <FirstLabel
-            sx={{
-              ...tlwh(231, 179, 651.813, 71),
-            }}
-          />
+          <FirstLabel sx={tlwh(228, 179, 651.81, 71)} />
 
-          <SecondLine sx={{ ...tlwh(312.27, 826.4, 430.17, 47) }} />
-          <SecondLabel sx={tlwh(323, 179, 651.81, 71)} />
+          <SecondLine sx={{ ...tlwh(309.27, 826.4, 430.17, 47) }} />
+          <SecondLabel sx={tlwh(320, 179, 651.81, 71)} />
 
-          <ThirdLine sx={tlwh(450.69, 828.23, 428.34, 130.85)} />
-          <ThirdLabel sx={tlwh(416, 179, 651.81, 71)} />
+          <ThirdLine sx={tlwh(446.69, 828.23, 428.34, 130.85)} />
+          <ThirdLabel sx={tlwh(412, 179, 651.81, 71)} />
 
           <FourthLine sx={tlwh(540.5, 824.12, 437.45, 202.04)} />
           <FourthLabel sx={tlwh(507, 179, 651.81, 71)} />
 
           <FifthLine sx={tlwh(635.81, 826.78, 435.79, 156.72)} />
-          <FifthLabel sx={tlwh(601, 179, 651.81, 81.58)} />
+          <FifthLabel sx={tlwh(601, 179, 651.81, 71)} />
 
           <SixthLine sx={tlwh(730.79, 829, 427.57, 116.75)} />
           <SixthLabel sx={tlwh(696, 179, 651.81, 71)} />
