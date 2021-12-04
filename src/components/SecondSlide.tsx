@@ -66,8 +66,8 @@ export default function SecondSlide(props: SecondSlideProps): JSX.Element {
             }}
           />
 
-          <SecondLine sx={{ ...tlwh(309.44, 826.4, 430.17, 47) }} />
-          <SecondLabel sx={tlwh(320, 179, 651.81, 71)} />
+          <SecondLine sx={{ ...tlwh(312.27, 826.4, 430.17, 47) }} />
+          <SecondLabel sx={tlwh(323, 179, 651.81, 71)} />
 
           <ThirdLine sx={tlwh(450.69, 828.23, 428.34, 130.85)} />
           <ThirdLabel sx={tlwh(416, 179, 651.81, 71)} />
