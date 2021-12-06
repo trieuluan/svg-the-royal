@@ -45,7 +45,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "craco start",
-    "build": "craco build",
+    "build": "APP_ENV=web craco build",
+    "build:plugin": "APP_ENV=plugin craco build --config craco-plugin.config.js && cp plugin-src/* svg-map-animations && npm publish svg-map-animations",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
