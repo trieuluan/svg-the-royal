@@ -1,13 +1,24 @@
 import { AspectRatio } from "@hungphongbk/vth-sdk";
 import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
-import { Box, SvgIcon } from "@mui/material";
+import { Box, styled, SvgIcon } from "@mui/material";
 import background from "./Background.png";
 import Content from "./Content";
+
+const StyledAspectRatio = styled(AspectRatio)`
+  @keyframes StrokeLine {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: -200;
+    }
+  }
+`;
 
 type FirstSlideProps = {};
 export default function FirstSlide(props: FirstSlideProps): JSX.Element {
   return (
-    <AspectRatio
+    <StyledAspectRatio
       ratio={"1920/928"}
       sx={{
         "& img": {
@@ -29,6 +40,6 @@ export default function FirstSlide(props: FirstSlideProps): JSX.Element {
           <Content />
         </SvgIcon>
       </Box>
-    </AspectRatio>
+    </StyledAspectRatio>
   );
 }

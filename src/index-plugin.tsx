@@ -4,6 +4,7 @@ import SecondSlide from "./components/SecondSlide";
 import FirstSlide from "./components/FirstSlide";
 import { domAnimation, LazyMotion } from "framer-motion";
 
+console.log("huhu");
 (
   [
     ["svg-animation-1", SecondSlide],

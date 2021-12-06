@@ -1,3 +1,5 @@
+import MotionPath from "./MotionPath";
+
 type ContentProps = {};
 export default function Content(props: ContentProps): JSX.Element {
   return (
@@ -271,7 +273,7 @@ export default function Content(props: ContentProps): JSX.Element {
       <g
         id="Web_1920_3"
         data-name="Web 1920 – 3"
-        clipPath="url(#clip-Web_1920_3)"
+        clip-path="url(#clip-Web_1920_3)"
       >
         <g id="Group_113" data-name="Group 113" transform="translate(0 -2787)">
           <path
@@ -478,8 +480,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M3.528,3031.71s168.713,28.845,276.07-123.049l28.808-53.273,28.531-66.307"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -488,8 +490,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M133.189,3018.548v34.076l1.965,65.876L223.2,3288.036l10.491,7.815a20.227,20.227,0,0,1,7.947,13.4l35.255,249.817-29.02,129.183-1.912,27.7"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -498,8 +500,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M3.528,3051.439l131.235,3.912L484,2980.712"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -508,8 +510,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M320.042,3070.692l277.575-43.437,99.285,40.732,111.633-1.273"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -520,8 +522,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(3.817 3134.177)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -530,8 +532,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M250.688,3373.99l-62.108,6.044a19.549,19.549,0,0,1-21.187-16.666l-12.431-86.01a10.706,10.706,0,0,1,7.151-11.666l84.018-28.542,127.384-18.134,267.594-11.058,171.878-40.251"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -542,8 +544,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(169.128 3263.121)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -552,18 +554,17 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M256.872,3387.46l52.045,32.006L626.1,3378.2l11.552-1.611a51.389,51.389,0,0,0,37.411-25.211l3.471-6.014a27.325,27.325,0,0,1,15.373-12.376l142.247-45.212"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
-          <path
-            id="Path_136"
-            data-name="Path 136"
+          <MotionPath
+            id="motionpath-2"
             d="M456.4,3397.949c-1.192-34.384-4.564-68.449-4.564-68.449l5.111-58.184,22.8-42.852"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="3.468"
+            stroke-miterlimit="10"
+            stroke-width="3.468"
           />
           <path
             id="Path_137"
@@ -571,8 +572,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M874.006,3430.956l-58.837,20.833-22.356,3.557-59.446,17.783-59.166,23.74"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -581,8 +582,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M947.193,3715.95l-95.759-217.662a13.2,13.2,0,0,1,2.587-14.2c24.215-25.9,20.086-52.62,20.086-52.62l-37.6-143.28-17.274-114.827-4.069-3.35a12.818,12.818,0,0,1-4.667-9.682l-2.95-177.5,10.161-46.743,14.227-26.929,30.569-120.074"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -591,8 +592,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M840.938,3715.95,712.064,3452.794,609.485,3103.83l-26.618-73.087a38.458,38.458,0,0,1-2.3-15.2c1.067-20.075-2.8-52.6,33.078-84.965l131.464-141.5"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -603,27 +604,9 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(312.563 3316.322)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
-          />
-          <path
-            id="Path_140"
-            data-name="Path 140"
-            d="M467.768,3215.333v6.378L441.9,3244.744l-15.946,32.246-3.976,40.122"
-            fill="none"
-            stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="3.468"
-          />
-          <path
-            id="Path_141"
-            data-name="Path 141"
-            d="M422.057,3316.322l10.985,86.815,15.224,134.315"
-            fill="none"
-            stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="3.468"
           />
           <path
             id="Path_142"
@@ -631,8 +614,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M276.349,3556.66l18.09-.781,163.933-19.37-1.347-12.531,13.744-1.617"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -641,8 +624,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M276.349,3562.156l18.09-3.016,164.52-19.446,1.442,12.5,14.021-1.682"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -651,8 +634,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M320,3070.4l-30.519-157.9-7.756-7.764"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -663,8 +646,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(319.996 3070.401)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -673,8 +656,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M255.18,3378.748l42.088-60.261,1.361-5.61"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -683,8 +666,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M261.736,3055.351l9.311,70.446,12.532,105.2,15.05,81.884"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -693,8 +676,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M336.937,3143.544l36.578,75.471,2.856,68.193,9.242,63.151"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -703,8 +686,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M406.995,3330.536l-6.749-37.937,13.092-75.859,15.018-155.568-9.242-66.617-13.061-104.077"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -713,8 +696,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M479.175,3587.044l62.975-7.211,3.6,42.968h5.264l4.522,26.959"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -723,8 +706,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M542.15,3579.834s10.349,11.021,16.087.638l3.279-4.372,18.853-.546-1.093-14.482,10.93-5.738,18.129-2.59a3.721,3.721,0,0,0,2.9-5.157c-5.122-11.858-21.033-43.283-21.7-44.17-.819-1.093-12.022-38.254-12.022-38.254l-7.924-11.749s-3.552-4.1,3.279-4.372,12.569,10.93,12.569,10.93l13.116,40.713,20.472,41.578a9.361,9.361,0,0,1-2.08,10.486l-2.965,2.858,8.381,79.612"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -733,8 +716,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M617.532,3589.362l-28.418,2.86-7.1-4.1-1.639-12.569"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -745,8 +728,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(455.916 2862.443)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -755,8 +738,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M466.43,2921.972"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -765,8 +748,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M470.1,3214.005l9.973-121.735,2.586-26.6L473.321,2983"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -775,8 +758,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M465.893,2921.726"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -785,8 +768,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M406.052,2890.479l5.89-8.86,39.485-19.176"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -795,8 +778,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M314.785,3043.437l-98.644,21.914a35.3,35.3,0,0,0-27.6,36.39l1.791,32.826"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -805,8 +788,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M478.914,3390.512c.69,0,13.442-.69,13.442-.69l12.924-2.585,21.049-12.834,63.123-6.877,35.047,10.719"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -815,8 +798,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M266.968,3487.168l96.576-12.845s14.084-1.858,15.322,4.952,8.048,65.468,8.048,65.468"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -825,8 +808,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M379.56,3483.058s-4.221-10.619,10.891-16.065,27.773-9.258,27.773-9.258l9.071-5.741a9.228,9.228,0,0,1,3.659-1.342l30.155-4.217"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -837,8 +820,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(317.639 3480.57)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -849,8 +832,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(286.014 3484.635)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -861,8 +844,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(386.914 3548.209)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -871,8 +854,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M471.005,3524.153l12.554-1.341a4.332,4.332,0,0,0,3.856-4.683l-.544-6.251,2.867-.264a2.7,2.7,0,0,0,2.431-3l-8.059-70.085a5.476,5.476,0,0,0-6.159-4.8l-18.181,2.4"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -881,8 +864,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M457.419,3415.957l5.289-.588,13.125,107.94"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -893,8 +876,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(472.307 3490.203)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -905,8 +888,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(474.462 3511.878)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -915,8 +898,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M482.886,3522.913c0-.846-1.237-10.616-1.237-10.616"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -927,8 +910,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(476.813 3453.57)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -939,8 +922,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(467.605 3452.982)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -951,8 +934,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(473.874 3413.998)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -963,8 +946,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(468.977 3465.911)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -975,8 +958,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(470.348 3478.057)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -985,8 +968,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M462.708,3415.37l33.7-3.527,5.795,2.766a5.255,5.255,0,0,0,5.355-.492l5.513-4.01a5.462,5.462,0,0,0,2.175-5.316l-1.991-11.95"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -995,8 +978,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M558.285,3093.3l14.347-.775,204.742,66.308,1.939,16.806"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -1005,8 +988,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M777.375,3158.831c1.166-2.624-1.047-92.07-1.047-92.07"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -1015,8 +998,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M216.389,3134.177l54.658-8.38,153.825-31.644,70.747-.857"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <line
@@ -1027,8 +1010,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(456.177 3405.375)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -1037,8 +1020,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M555.538,2789.081l1.524,301.968,17.415,64.527L587.07,3269.81a15.09,15.09,0,0,0,16.365,13.375h0a6.866,6.866,0,0,1,7.415,5.837l15.312,103.829,37.527,72.9,10.512,31.115,19.259,122.876"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <circle
@@ -1077,8 +1060,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="matrix(0.99, -0.138, 0.138, 0.99, 81.451, 3279.91)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -1087,8 +1070,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M127.684,3479.084l-12.382,1.727a5.559,5.559,0,0,0-4.738,6.274l13.054,91.383a5.561,5.561,0,0,0,6.275,4.738l12.382-1.727a5.56,5.56,0,0,0,4.738-6.275l-13.054-91.382A5.561,5.561,0,0,0,127.684,3479.084Z"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -1097,8 +1080,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M266.6,3604.882l60.341,13.965,44.762-4.895,21.648-9.071,85.824-17.838"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -1107,8 +1090,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M247.522,3693.321l239.869-28.729L728.1,3612.206l20.119-15.616,118.952-61.516"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -1117,8 +1100,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M636.021,2789.081l86.955,79.65,108.959,40.424"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <path
@@ -1127,17 +1110,17 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M436.355,2789.081l34.477,73.362.646,21.832"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
-          <path
+          <MotionPath
             id="motionpath-1"
             d="M477.895,3412.816,476.7,3399.4l-2.831-73.055,2.156-23.858,5.436-72.229a1.658,1.658,0,0,0-1.713-1.791h0l1.551-77.731L492.869,3121a5.861,5.861,0,0,0,.381-1.859l4.243-64.9-15.725-85.715a15.019,15.019,0,0,1,.374-6.983l2.3-7.746a19.7,19.7,0,0,0,.6-8.472l-6.036-51.339c-.338-2.5-7.518-10.167-9.006-12.209l-14.088-19.336"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="5.78"
+            stroke-miterlimit="10"
+            stroke-width="5.78"
           />
           <path
             id="Path_174"
@@ -1145,8 +1128,8 @@ export default function Content(props: ContentProps): JSX.Element {
             d="M453.917,2859.969l-22.141-30.889-84.858-40"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="2.023"
+            stroke-miterlimit="10"
+            stroke-width="2.023"
             opacity="0.5"
           />
           <circle
@@ -3896,6 +3879,14 @@ export default function Content(props: ContentProps): JSX.Element {
               fill="#fff"
             />
           </g>
+          <MotionPath
+            id="motionpath-3"
+            d="M-101.232,447.333v6.673l-26.051,23.511-15.809,32.388-3.689,38.55,26.4,221.065"
+            transform="translate(567 2768)"
+            fill="none"
+            stroke="#e72024"
+            stroke-width="4"
+          />
         </g>
         <g id="Group_220" data-name="Group 220" transform="translate(0 -2787)">
           <g id="Group_123" data-name="Group 123">
@@ -4808,8 +4799,8 @@ export default function Content(props: ContentProps): JSX.Element {
               transform="translate(741.132 3419.293)"
               fill="none"
               stroke="#e72024"
-              strokeMiterlimit="10"
-              strokeWidth="0.694"
+              stroke-miterlimit="10"
+              stroke-width="0.694"
             />
             <g id="J4080M">
               <g id="Group_142" data-name="Group 142">
@@ -4831,8 +4822,8 @@ export default function Content(props: ContentProps): JSX.Element {
               transform="translate(789.039 3521.981)"
               fill="none"
               stroke="#e72024"
-              strokeMiterlimit="10"
-              strokeWidth="0.832"
+              stroke-miterlimit="10"
+              stroke-width="0.832"
             />
             <g id="Group_147" data-name="Group 147">
               <g id="Group_145" data-name="Group 145">
@@ -6567,7 +6558,7 @@ export default function Content(props: ContentProps): JSX.Element {
             <g
               id="Path_1008"
               data-name="Path 1008"
-              strokeMiterlimit="10"
+              stroke-miterlimit="10"
               fill="url(#linear-gradient-35)"
             >
               <path
@@ -7095,8 +7086,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(643.734 2850.091)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="0.578"
+            stroke-miterlimit="10"
+            stroke-width="0.578"
           />
           <g id="Group_217" data-name="Group 217">
             <g id="Group_216" data-name="Group 216">
@@ -7194,8 +7185,8 @@ export default function Content(props: ContentProps): JSX.Element {
             transform="translate(31.912 3121.494)"
             fill="none"
             stroke="#e72024"
-            strokeMiterlimit="10"
-            strokeWidth="0.694"
+            stroke-miterlimit="10"
+            stroke-width="0.694"
           />
           <g id="Group_219" data-name="Group 219">
             <rect
