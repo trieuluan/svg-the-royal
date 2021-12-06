@@ -1,7 +1,7 @@
 import { AspectRatio } from "@hungphongbk/vth-sdk";
 import background from "./Slide2.png";
 import { Box } from "@mui/material";
-import { sxFullSize } from "@hungphongbk/vth-sdk/dist/utils/predefinedSx";
+import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
 import FirstLabel from "./SecondSlide/FirstLabel";
 import FirstLine from "./SecondSlide/FirstLine";
 import SecondLabel from "./SecondSlide/SecondLabel";
