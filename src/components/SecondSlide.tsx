@@ -21,13 +21,13 @@ import BuildingAreas from "./SecondSlide/BuildingAreas";
 // import part1 from './Slide2Part1.svg';
 
 const getXSize = (w: number) => `${w / 19.1984}%`,
-  getYSize = (h: number) => `${h / 9.2927}%`,
-  tlwh = (y: number, x: number, w: number, h: number) => ({
-    top: getYSize(y),
-    left: getXSize(x),
-    width: getXSize(w),
-    height: getYSize(h),
-  });
+  getYSize = (h: number) => `${h / 9.2927}%`;
+export const tlwh = (y: number, x: number, w: number, h: number) => ({
+  top: getYSize(y),
+  left: getXSize(x),
+  width: getXSize(w),
+  height: getYSize(h),
+});
 
 type SecondSlideProps = unknown;
 export default function SecondSlide(props: SecondSlideProps): JSX.Element {
