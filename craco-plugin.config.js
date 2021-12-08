@@ -43,6 +43,8 @@ module.exports = {
       "@mui/styled-engine": "@mui/styled-engine-sc",
     },
     configure: (webpackConfig, { paths }) => {
+      webpackConfig.output.publicPath =
+        "/wp-content/plugins/svg-map-animations/";
       paths.appBuild = webpackConfig.output.path = path.resolve(
         "svg-map-animations/build"
       );
