@@ -1,9 +1,9 @@
 import { AspectRatio } from "@hungphongbk/vth-sdk";
 import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
-import { Box, styled, SvgIcon } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import background from "./BackgroundMobile.png";
-import mark from "./mark.png";
-import Content from "./Content";
+import ContentMobile from "./ContentMobile";
+import { tlwhMob } from "../commons/responsives";
 
 const StyledAspectRatio = styled(AspectRatio)`
   @keyframes StrokeLine {
@@ -17,15 +17,15 @@ const StyledAspectRatio = styled(AspectRatio)`
   @keyframes Splash {
     from {
       opacity: 0;
-      transform: scale(0.5);
+      //transform: scale(0.5);
     }
     50% {
       opacity: 1;
-      transform: scale(1.3);
+      //transform: scale(1.3);
     }
     to {
       opacity: 1;
-      transform: scale(1);
+      //transform: scale(1);
     }
   }
 `;
@@ -46,36 +46,9 @@ export default function FirstSlideMobile(props: FirstSlideProps): JSX.Element {
         },
       }}
     >
-      <Box>
+      <Box sx={{ "& >*": { position: "absolute" } }}>
         <img className={"background"} src={background} />
-        <Box sx={{ position: "absolute", bottom: 0, left: 0, right: 0 }}>
-          <AspectRatio ratio={"414/384"}>
-            <Box>
-              <SvgIcon
-                viewBox={"0 0 928 928"}
-                sx={{
-                  width: "100%",
-                  height: "auto",
-                  mt: `1.2%`,
-                  ml: "-4.3%",
-                  marginTop: "-2.4%",
-                  marginLeft: "-3.8%",
-                  transform: "scale(.956)",
-                  transformOrigin: "center",
-                }}
-              >
-                <Content />
-                <image
-                  href={mark}
-                  y={408.61}
-                  x={448.56}
-                  width={53.63}
-                  height={108.28}
-                />
-              </SvgIcon>
-            </Box>
-          </AspectRatio>
-        </Box>
+        <ContentMobile sx={tlwhMob(510.44, -3.5, 405.29, 398.07)} />
       </Box>
     </StyledAspectRatio>
   );

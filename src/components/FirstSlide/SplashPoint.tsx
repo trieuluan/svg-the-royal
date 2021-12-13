@@ -6,7 +6,7 @@ const StyledG = styled("g")<{ delay: string | number }>`
   transform-box: fill-box;
   animation: Splash 0.75s normal backwards ease-in-out;
   animation-iteration-count: 1;
-  animation-delay: ${(props: any) => props.delay * 100}ms;
+  animation-delay: ${(props: any) => props.delay * 150}ms;
 
   pointer-events: bounding-box;
   cursor: pointer;
