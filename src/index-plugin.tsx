@@ -1,8 +1,8 @@
 import React, { ComponentType } from "react";
 import ReactDOM from "react-dom";
-import SecondSlide from "./components/SecondSlide";
 import FirstSlide from "./components/FirstSlide";
 import { domAnimation, LazyMotion } from "framer-motion";
+import SecondSlide from "./components/SecondSlide";
 
 console.log("huhu");
 (

@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import SecondSlide from "./components/SecondSlide";
 import WebFont from "webfontloader";
 import { domAnimation, LazyMotion } from "framer-motion";
 import { HashRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
 import FirstSlide from "./components/FirstSlide";
+import SecondSlide from "./components/SecondSlide";
 
 function App() {
   useEffect(() => {
