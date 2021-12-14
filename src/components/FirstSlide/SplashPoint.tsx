@@ -24,7 +24,13 @@ export default function SplashPoint({
   const delay = useMemo(() => id!.match(/(\d+)/)![0], [id]);
   return (
     <>
-      <StyledG id={id} delay={delay} transform-origin={"center"} {...props} />
+      <StyledG
+        className={"splashpoint"}
+        id={id}
+        delay={delay}
+        transform-origin={"center"}
+        {...props}
+      />
     </>
   );
 }

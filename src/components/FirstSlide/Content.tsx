@@ -597,15 +597,13 @@ export default function Content(props: ContentProps): JSX.Element {
             stroke-width="2.023"
             opacity="0.5"
           />
-          <line
-            id="Line_3"
-            data-name="Line 3"
-            x1="109.493"
-            y2="102.407"
+          <MotionPath
+            id="Path_1521"
+            data-name="Path 1521"
+            d="M109.493,0,0,102.407"
             transform="translate(312.563 3316.322)"
             fill="none"
             stroke="#e72024"
-            stroke-miterlimit="10"
             stroke-width="2.023"
             opacity="0.5"
           />
@@ -1003,15 +1001,13 @@ export default function Content(props: ContentProps): JSX.Element {
             stroke-width="2.023"
             opacity="0.5"
           />
-          <line
-            id="Line_16"
-            data-name="Line 16"
-            x2="32.37"
-            y2="259.217"
+          <MotionPath
+            id="Path_15211"
+            data-name="Path 1521"
+            d="M0,0,32.37,259.217"
             transform="translate(456.177 3405.375)"
             fill="none"
             stroke="#e72024"
-            stroke-miterlimit="10"
             stroke-width="2.023"
             opacity="0.5"
           />

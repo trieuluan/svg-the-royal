@@ -19,14 +19,25 @@ const StyledAspectRatio = styled(AspectRatio)`
       opacity: 0;
       transform: scale(0.5);
     }
-    50% {
+    10% {
       opacity: 1;
       transform: scale(1.3);
+    }
+    30% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    90% {
+      opacity: 0;
+      transform: scale(0.5);
     }
     to {
       opacity: 1;
       transform: scale(1);
     }
+  }
+  .splashpoint {
+    animation-duration: 3.75s;
   }
 `;
 
