@@ -23,7 +23,7 @@ export default function Slide3Desktop(props: Slide3DesktopProps): JSX.Element {
           src={background}
           style={tlwhD(-217, -1.88, 1921.88, 1170.04)}
         />
-        <ContentDesktop sx={tlwhD(1.09, -13.94, 1933.44, 952.49)} />
+        <ContentDesktop sx={tlwhD(264.72, -13.94, 946.74, 688.85)} />
       </Box>
     </AspectRatio>
   );

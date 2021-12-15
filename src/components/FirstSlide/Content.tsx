@@ -1,7 +1,7 @@
 import AnimateContentWrapper from "./AnimateContentWrapper";
 import mark from "./mark.png";
 import { SvgIconProps } from "@mui/material";
-import SplashMark from "./SplashMark";
+import SplashMark from "../commons/SplashMark";
 
 type ContentProps = {};
 export default function Content(props: SvgIconProps): JSX.Element {
