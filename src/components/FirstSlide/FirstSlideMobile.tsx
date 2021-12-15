@@ -14,20 +14,6 @@ const StyledAspectRatio = styled(AspectRatio)`
       stroke-dashoffset: -200;
     }
   }
-  @keyframes Splash {
-    from {
-      opacity: 0;
-      //transform: scale(0.5);
-    }
-    50% {
-      opacity: 1;
-      //transform: scale(1.3);
-    }
-    to {
-      opacity: 1;
-      //transform: scale(1);
-    }
-  }
 `;
 
 type FirstSlideProps = {};
@@ -46,7 +32,7 @@ export default function FirstSlideMobile(props: FirstSlideProps): JSX.Element {
         },
       }}
     >
-      <Box sx={{ "& >*": { position: "absolute" } }}>
+      <Box sx={{ overflow: "hidden", "& >*": { position: "absolute" } }}>
         <img className={"background"} src={background} />
         <ContentMobile sx={tlwhMob(510.44, -3.5, 405.29, 398.07)} />
       </Box>

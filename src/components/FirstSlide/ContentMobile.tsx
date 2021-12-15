@@ -1,6 +1,7 @@
 import { SvgIconProps } from "@mui/material";
 import AnimateContentWrapper from "./AnimateContentWrapper";
 import mark from "./mark.png";
+import SplashMark from "./SplashMark";
 
 type ContentMobileProps = {};
 export default function ContentMobile(props: SvgIconProps): JSX.Element {
@@ -192,6 +193,25 @@ export default function ContentMobile(props: SvgIconProps): JSX.Element {
           x2="1.574"
           y2="-0.469"
           xlinkHref="#linear-gradient-26"
+        />
+        <linearGradient
+          id="linear-gradient-31"
+          x1="0.202"
+          y1="-0.566"
+          x2="0.782"
+          y2="0.747"
+          gradientUnits="objectBoundingBox"
+        >
+          <stop offset="0" stop-color="#fff" stop-opacity="0" />
+          <stop offset="1" stop-color="#e71c24" />
+        </linearGradient>
+        <linearGradient
+          id="linear-gradient-32"
+          x1="0.152"
+          y1="-0.16"
+          x2="0.66"
+          y2="0.649"
+          xlinkHref="#linear-gradient-31"
         />
       </defs>
       <path
@@ -715,15 +735,12 @@ export default function ContentMobile(props: SvgIconProps): JSX.Element {
         stroke-width="2.023"
         opacity="0.5"
       />
-      <line
-        id="Line_5"
-        data-name="Line 5"
-        x1="7.475"
-        y1="51.775"
+      <path
+        id="motionpath-8"
+        d="M7.475,51.775,0,0"
         transform="translate(194.462 32.422)"
         fill="none"
         stroke="#e72024"
-        stroke-miterlimit="10"
         stroke-width="2.023"
         opacity="0.5"
       />
@@ -739,8 +756,7 @@ export default function ContentMobile(props: SvgIconProps): JSX.Element {
         opacity="0.5"
       />
       <path
-        id="Path_153"
-        data-name="Path 153"
+        id="motionpath-9"
         d="M470.1,3082.21l4.283-52.282,1.111-11.424L471.483,2983"
         transform="translate(-269.545 -2898.798)"
         fill="none"
@@ -5847,6 +5863,7 @@ export default function ContentMobile(props: SvgIconProps): JSX.Element {
             fill="#ae8835"
           />
           <path
+            id="Path_1116"
             data-name="Path 1116"
             d="M215.152,3180.64l-.059-.133a.447.447,0,0,1,.121-.09.512.512,0,0,1,.241-.059.588.588,0,0,1,.317.081.31.31,0,0,1,.154.277.413.413,0,0,1-.087.258.527.527,0,0,1-.245.173.432.432,0,0,1,.293.1.351.351,0,0,1,.118.28.459.459,0,0,1-.183.381.71.71,0,0,1-.448.142.9.9,0,0,1-.2-.022.729.729,0,0,1-.18-.063.38.38,0,0,0,.018-.067c0-.025.008-.052.012-.082l.015-.01a.538.538,0,0,0,.154.118.4.4,0,0,0,.183.046.363.363,0,0,0,.293-.124.464.464,0,0,0,.1-.312.337.337,0,0,0-.089-.252.35.35,0,0,0-.254-.087l-.068,0-.051,0,.01-.05a.173.173,0,0,0-.01-.049l.094,0a.259.259,0,0,0,.225-.111.413.413,0,0,0,.073-.251.351.351,0,0,0-.07-.225.233.233,0,0,0-.193-.087.283.283,0,0,0-.167.054.318.318,0,0,0-.112.145Z"
             transform="translate(-201.752 -3176.793)"
@@ -5862,7 +5879,40 @@ export default function ContentMobile(props: SvgIconProps): JSX.Element {
         stroke="#e72024"
         stroke-width="4"
       />
-      <image href={mark} y={170} x={195} width={23.03} height={46.55} />
+      <ellipse
+        id="Ellipse_5"
+        data-name="Ellipse 5"
+        cx="1.551"
+        cy="1.551"
+        rx="1.551"
+        ry="1.551"
+        transform="translate(201.499 218.955)"
+        fill="#a61825"
+        stroke="#fff"
+        stroke-miterlimit="10"
+        stroke-width="0.37"
+      />
+      <SplashMark
+        id="splashmark"
+        transform="translate(191.33 205.148)"
+        opacity="0.7"
+      >
+        <path
+          id="Path_1117"
+          data-name="Path 1117"
+          d="M448.624,3264.616l11.325,15.551a.5.5,0,0,0,.774.069l10.876-12.223Z"
+          transform="translate(-448.624 -3264.616)"
+          fill="url(#linear-gradient-31)"
+        />
+        <path
+          id="Path_1118"
+          data-name="Path 1118"
+          d="M472.223,3274.688l1.695,10.362,11.144-12.524-12.839,2.163"
+          transform="translate(-462.088 -3269.129)"
+          fill="url(#linear-gradient-32)"
+        />
+      </SplashMark>
+      <image href={mark} y={170} x={191.1} width={23.03} height={46.55} />
     </AnimateContentWrapper>
   );
 }
