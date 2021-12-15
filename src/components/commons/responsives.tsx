@@ -1,4 +1,5 @@
 import { useMediaQuery } from "react-responsive";
+import { ComponentType } from "react";
 
 export const Desktop = ({ children }: any) => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -17,3 +18,19 @@ export const tlwhMob = (y: number, x: number, w: number, h: number) => ({
   width: getXSizeMob(w),
   height: getYSizeMob(h),
 });
+
+export function Responsive(props: {
+  d: ComponentType<any>;
+  m: ComponentType<any>;
+}): JSX.Element {
+  return (
+    <>
+      <Desktop>
+        <props.d />
+      </Desktop>
+      <Mobile>
+        <props.m />
+      </Mobile>
+    </>
+  );
+}

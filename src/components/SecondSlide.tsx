@@ -1,18 +1,11 @@
 import { PropsWithChildren } from "react";
-import SecondSlideDesktop from "./SecondSlideDesktop";
-import SecondSlideMobile from "./SecondSlideMobile";
-import { Desktop, Mobile } from "./commons/responsives";
+import { Responsive } from "./commons/responsives";
+import loadable from "@loadable/component";
+
+const Desktop = loadable(() => import("./SecondSlideDesktop")),
+  Mobile = loadable(() => import("./SecondSlideMobile"));
 
 type Props = PropsWithChildren<unknown>;
 export default function SecondSlide(props: Props): JSX.Element {
-  return (
-    <>
-      <Desktop>
-        <SecondSlideDesktop />
-      </Desktop>
-      <Mobile>
-        <SecondSlideMobile />
-      </Mobile>
-    </>
-  );
+  return <Responsive d={Desktop} m={Mobile} />;
 }
