@@ -10,6 +10,17 @@ export const Mobile = ({ children }: any) => {
   return isMobile ? children : null;
 };
 
+export function tlwhGenerator(baseW: number, baseH: number) {
+  const getXSize = (w: number) => `${(w * 100.0) / baseW}%`,
+    getYSize = (h: number) => `${(h * 100.0) / baseH}%`;
+  return (y: number, x: number, w: number, h: number) => ({
+    top: getYSize(y),
+    left: getXSize(x),
+    width: getXSize(w),
+    height: getYSize(h),
+  });
+}
+
 const getXSizeMob = (w: number) => `${w / 4.14}%`,
   getYSizeMob = (h: number) => `${h / 8.96}%`;
 export const tlwhMob = (y: number, x: number, w: number, h: number) => ({

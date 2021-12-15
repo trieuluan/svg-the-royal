@@ -5,6 +5,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import FirstSlide from "./components/FirstSlide";
 import SecondSlide from "./components/SecondSlide";
+import Slide3 from "./components/Slide3";
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path={"1"} element={<SecondSlide />} />
           <Route path={"2"} element={<FirstSlide />} />
+          <Route path={"3"} element={<Slide3 />} />
         </Routes>
       </HashRouter>
     </LazyMotion>
