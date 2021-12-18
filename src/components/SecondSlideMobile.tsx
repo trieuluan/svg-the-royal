@@ -1,4 +1,3 @@
-import { AspectRatio } from "@hungphongbk/vth-sdk";
 import background from "./Slide2Mobile.png";
 import { Box } from "@mui/material";
 import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
@@ -11,6 +10,7 @@ import ThirdLabelMobile from "./SecondSlide/ThirdLabelMobile";
 import FourthLabelMobile from "./SecondSlide/FourthLabelMobile";
 import FifthLabelMobile from "./SecondSlide/FifthLabelMobile";
 import SixthLabelMobile from "./SecondSlide/SixthLabelMobile";
+import AspectRatio from "./commons/AspectRatio";
 // import part1 from './Slide2Part1.svg';
 
 const getXSize = (w: number) => `${w / 4.14}%`,

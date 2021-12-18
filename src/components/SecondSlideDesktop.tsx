@@ -1,4 +1,3 @@
-import { AspectRatio } from "@hungphongbk/vth-sdk";
 import background from "./Slide2.png";
 import { Box } from "@mui/material";
 import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
@@ -18,6 +17,7 @@ import SixthLabel from "./SecondSlide/SixthLabel";
 import SixthLine from "./SecondSlide/SixthLine";
 import { SlideLabel } from "./SecondSlide/common";
 import BuildingAreas from "./SecondSlide/BuildingAreas";
+import AspectRatio from "./commons/AspectRatio";
 // import part1 from './Slide2Part1.svg';
 
 const getXSize = (w: number) => `${w / 19.1984}%`,

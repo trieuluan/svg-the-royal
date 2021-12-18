@@ -1,8 +1,8 @@
-import { AspectRatio } from "@hungphongbk/vth-sdk";
 import { Box } from "@mui/material";
 import background from "./bg.png";
 import ContentDesktop from "./ContentDesktop";
 import { tlwhD } from "./utils";
+import AspectRatio from "../commons/AspectRatio";
 
 type Slide3DesktopProps = {};
 export default function Slide3Desktop(props: Slide3DesktopProps): JSX.Element {

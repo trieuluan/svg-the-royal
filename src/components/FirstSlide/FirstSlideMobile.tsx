@@ -1,9 +1,9 @@
-import { AspectRatio } from "@hungphongbk/vth-sdk";
 import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
 import { Box, styled } from "@mui/material";
 import background from "./BackgroundMobile.png";
 import ContentMobile from "./ContentMobile";
 import { tlwhMob } from "../commons/responsives";
+import AspectRatio from "../commons/AspectRatio";
 
 const StyledAspectRatio = styled(AspectRatio)`
   @keyframes StrokeLine {

@@ -2,8 +2,8 @@ import { Box } from "@mui/material";
 import background from "./bg-mobile.png";
 import { tlwhM } from "./utils";
 import ContentDesktop from "./ContentDesktop";
-import { AspectRatio } from "@hungphongbk/vth-sdk";
 import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
+import AspectRatio from "../commons/AspectRatio";
 
 type Slide3MobileProps = {};
 export default function Slide3Mobile(props: Slide3MobileProps): JSX.Element {
