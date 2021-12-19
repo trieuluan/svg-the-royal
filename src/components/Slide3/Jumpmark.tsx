@@ -32,5 +32,9 @@ const StyledG = styled("g")`
 
 export default function Jumpmark(props: SVGProps<SVGGElement>): JSX.Element {
   console.log("jumpmark");
-  return <StyledG {...props} />;
+  return (
+    <StyledG data-index={(props as any)["data-index"]}>
+      <g {...props} />
+    </StyledG>
+  );
 }

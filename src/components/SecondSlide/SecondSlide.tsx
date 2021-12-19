@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { Responsive } from "./commons/responsives";
+import { Responsive } from "../commons/responsives";
 import loadable from "@loadable/component";
 
 const Desktop = loadable(() => import("./SecondSlideDesktop")),

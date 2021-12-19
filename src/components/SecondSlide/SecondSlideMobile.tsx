@@ -1,16 +1,16 @@
 import background from "./Slide2Mobile.png";
 import { Box } from "@mui/material";
 import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
-import { SlideContext } from "./SecondSlide/Context";
+import { SlideContext } from "./Context";
 import { useState } from "react";
-import { SlideLabel } from "./SecondSlide/common";
-import FirstLabelMobile from "./SecondSlide/FirstLabelMobile";
-import SecondLabelMobile from "./SecondSlide/SecondLabelMobile";
-import ThirdLabelMobile from "./SecondSlide/ThirdLabelMobile";
-import FourthLabelMobile from "./SecondSlide/FourthLabelMobile";
-import FifthLabelMobile from "./SecondSlide/FifthLabelMobile";
-import SixthLabelMobile from "./SecondSlide/SixthLabelMobile";
-import AspectRatio from "./commons/AspectRatio";
+import { SlideLabel } from "./common";
+import FirstLabelMobile from "./FirstLabelMobile";
+import SecondLabelMobile from "./SecondLabelMobile";
+import ThirdLabelMobile from "./ThirdLabelMobile";
+import FourthLabelMobile from "./FourthLabelMobile";
+import FifthLabelMobile from "./FifthLabelMobile";
+import SixthLabelMobile from "./SixthLabelMobile";
+import AspectRatio from "../commons/AspectRatio";
 // import part1 from './Slide2Part1.svg';
 
 const getXSize = (w: number) => `${w / 4.14}%`,

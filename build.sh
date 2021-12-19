@@ -6,4 +6,5 @@ cd plugin-src
 npm version prerelease -m "update prerelease version to %s"
 cd ..
 cp plugin-src/* svg-map-animations
-npm publish svg-map-animations
+cd svg-map-animations
+npm publish

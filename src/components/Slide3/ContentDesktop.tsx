@@ -37,8 +37,8 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
         </linearGradient>
         <filter
           id="Bạch_Đằng"
-          x="583.44"
-          y="368.926"
+          x="563.44"
+          y="369.926"
           width="205"
           height="48"
           filterUnits="userSpaceOnUse"
@@ -51,7 +51,7 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
         </filter>
         <filter
           id="Bình_Minh_5"
-          x="593.44"
+          x="587.44"
           y="192.926"
           width="213"
           height="46"
@@ -65,8 +65,8 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
         </filter>
         <filter
           id="Trần_Văn_Trứ"
-          x="38.44"
-          y="340.926"
+          x="25.44"
+          y="333.926"
           width="248"
           height="47"
           filterUnits="userSpaceOnUse"
@@ -79,8 +79,8 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
         </filter>
       </defs>
       <g
-        id="Group_702"
-        data-name="Group 702"
+        id="Group_699"
+        data-name="Group 699"
         transform="translate(13.94 -264.574)"
       >
         <path
@@ -101,7 +101,8 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
         />
         <path
           id="motionpath-3"
-          data-name={"motionpath"}
+          data-name="motionpath"
+          data-index="3"
           d="M921.484,266.34S693.862,578.975,649.674,790.477c.735-.523-268.431,120.648-348.355,162.079"
           fill="none"
           stroke="#a61f26"
@@ -111,14 +112,14 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
         />
         <g
           id="jumpmark-3"
-          transform="translate(-10)"
-          data-name={"jumpmark"}
-          data-index={3}
+          data-name="jumpmark"
+          data-index="3"
+          transform="translate(-22 1)"
         >
           <g
             id="Group_455"
             data-name="Group 455"
-            transform="translate(642.673 681.923)"
+            transform="translate(641 681.923)"
           >
             <g
               id="Path_1554"
@@ -149,13 +150,13 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
             </g>
           </g>
           <g
-            transform="matrix(1, 0, 0, 1, -3.94, 264.57)"
+            transform="matrix(1, 0, 0, 1, 8.06, 263.57)"
             filter="url(#Bạch_Đằng)"
           >
             <text
               id="Bạch_Đằng-2"
               data-name="Bạch Đằng"
-              transform="translate(587.94 401.43)"
+              transform="translate(567.94 402.43)"
               fill="#fff"
               font-size="30"
               font-family="Montserrat-Bold, Montserrat"
@@ -169,7 +170,8 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
         </g>
         <path
           id="motionpath-2"
-          data-name={"motionpath"}
+          data-name="motionpath"
+          data-index="2"
           d="M575.221,591.914,719.38,598.47"
           fill="none"
           stroke="#a61f26"
@@ -178,7 +180,8 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
         />
         <path
           id="motionpath-1"
-          data-name={"motionpath"}
+          data-name="motionpath"
+          data-index="1"
           d="M516.919,666.027l280.1-228.746"
           transform="translate(-516 192)"
           fill="none"
@@ -187,11 +190,11 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
           stroke-dasharray="15"
           opacity="0.67"
         />
-        <g id="jumpmark-2" data-name={"jumpmark"} data-index={2}>
+        <g id="jumpmark-2" data-name="jumpmark" data-index="2">
           <g
             id="Group_456"
             data-name="Group 456"
-            transform="translate(641.644 498.165)"
+            transform="translate(647 498.165)"
           >
             <g
               id="Path_1554-2"
@@ -230,7 +233,7 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
             <text
               id="Bình_Minh_5-2"
               data-name="Bình Minh 5"
-              transform="translate(597.94 223.43)"
+              transform="translate(591.94 223.43)"
               fill="#fff"
               font-size="30"
               font-family="Montserrat-Bold, Montserrat"
@@ -242,11 +245,16 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
             </text>
           </g>
         </g>
-        <g id="jumpmark" data-name={"jumpmark"} data-index={1}>
+        <g
+          id="jumpmark-1"
+          data-name="jumpmark"
+          data-index="1"
+          transform="translate(-13 -7)"
+        >
           <g
             id="Group_457"
             data-name="Group 457"
-            transform="translate(107.554 656.682)"
+            transform="translate(115 656.682)"
           >
             <g
               id="Path_1554-3"
@@ -277,13 +285,13 @@ export default function ContentDesktop(props: SvgIconProps): JSX.Element {
             </g>
           </g>
           <g
-            transform="matrix(1, 0, 0, 1, -13.94, 264.57)"
+            transform="matrix(1, 0, 0, 1, -0.94, 271.57)"
             filter="url(#Trần_Văn_Trứ)"
           >
             <text
               id="Trần_Văn_Trứ-2"
               data-name="Trần Văn Trứ"
-              transform="translate(42.94 372.43)"
+              transform="translate(29.94 365.43)"
               fill="#fff"
               font-size="30"
               font-family="Montserrat-Bold, Montserrat"

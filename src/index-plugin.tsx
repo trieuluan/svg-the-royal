@@ -2,7 +2,7 @@ import React, { ComponentType } from "react";
 import ReactDOM from "react-dom";
 import FirstSlide from "./components/FirstSlide";
 import { domAnimation, LazyMotion } from "framer-motion";
-import SecondSlide from "./components/SecondSlide";
+import SecondSlide from "./components/SecondSlide/SecondSlide";
 import Slide3 from "./components/Slide3";
 
 (

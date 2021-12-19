@@ -4,7 +4,7 @@ import { domAnimation, LazyMotion } from "framer-motion";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import FirstSlide from "./components/FirstSlide";
-import SecondSlide from "./components/SecondSlide";
+import SecondSlide from "./components/SecondSlide/SecondSlide";
 import Slide3 from "./components/Slide3";
 
 function App() {
