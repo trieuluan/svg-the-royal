@@ -12,7 +12,7 @@ const container = {
   hidden: {},
   show: {
     transition: {
-      delayChildren: 1.5,
+      delayChildren: 0,
       duration: 1,
       staggerChildren: 1,
     },
@@ -20,8 +20,8 @@ const container = {
 } as const;
 
 const item = {
-  hidden: { opacity: 0, y: 10 },
-  show: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: "100%", transition: { duration: 0.5 } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 } as const;
 const MotionStack = m(Stack);
 
@@ -55,14 +55,39 @@ export default function Slide3Desktop(props: Slide3DesktopProps): JSX.Element {
             transform: "translateY(-45%)",
             pr: "10%",
             pl: "5%",
+            "& .MuiBox-root": {
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              overflow: "hidden",
+              pt: 1,
+            },
           }}
           variants={container}
           initial={"hidden"}
           animate={"show"}
         >
-          <m.img src={text1desktop} style={{ width: "100%" }} variants={item} />
-          <m.img src={text2desktop} style={{ width: "45%" }} variants={item} />
-          <m.img src={text3desktop} style={{ width: "25%" }} variants={item} />
+          <Box>
+            <m.img
+              src={text1desktop}
+              style={{ width: "100%" }}
+              variants={item}
+            />
+          </Box>
+          <Box>
+            <m.img
+              src={text2desktop}
+              style={{ width: "45%" }}
+              variants={item}
+            />
+          </Box>
+          <Box>
+            <m.img
+              src={text3desktop}
+              style={{ width: "25%" }}
+              variants={item}
+            />
+          </Box>
         </MotionStack>
       </Box>
     </AspectRatio>

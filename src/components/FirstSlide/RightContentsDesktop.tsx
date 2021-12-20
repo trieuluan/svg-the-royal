@@ -15,9 +15,9 @@ export default function RightContentsDesktop(
         position: "absolute",
         top: 0,
         right: 0,
-        left: "100vh",
-        p: "3rem",
-        pr: "4rem",
+        left: "50vw",
+        p: "4rem",
+        pl: "2.5rem",
         "& .MuiTypography-root": {
           color: "white",
           fontFamily: "Montserrat",

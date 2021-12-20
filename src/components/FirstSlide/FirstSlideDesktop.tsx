@@ -1,4 +1,3 @@
-import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
 import {
   Box,
   createTheme,
@@ -11,6 +10,7 @@ import Content from "./Content";
 import { tlwh } from "../SecondSlide/SecondSlideDesktop";
 import AspectRatio from "../commons/AspectRatio";
 import RightContentsDesktop from "./RightContentsDesktop";
+import { sxFullSizeAbsolute } from "@hungphongbk/vth-sdk/utils/predefinedSx";
 
 const StyledAspectRatio = styled(AspectRatio)`
   @keyframes StrokeLine {
@@ -41,23 +41,21 @@ export default function FirstSlideDesktop(props: FirstSlideProps): JSX.Element {
             overflow: "hidden",
           }}
         >
+          <Box sx={{ ...sxFullSizeAbsolute }}>
+            <img
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              src={background}
+            />
+          </Box>
           <StyledAspectRatio
             ratio={"1920/928"}
             sx={{
               height: "100%",
-              width: "auto",
-              "& img.background": {
-                ...sxFullSize,
-                top: 0,
-                left: 0,
-                objectFit: "cover",
-                position: "absolute",
-                zIndex: -1,
-              },
+              width: "100%",
+              objectFit: "contain",
             }}
           >
             <Box sx={{ "& >*": { position: "absolute" } }}>
-              <img className={"background"} src={background} />
               <Content sx={tlwh(2.08, 3.53, 943.66, 926.87)} />
             </Box>
           </StyledAspectRatio>
