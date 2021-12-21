@@ -9,10 +9,10 @@ const StyledG = styled("g")`
       transform: scale(1);
     }
     15% {
-      transform: scale(1.3);
+      transform: scale(1.2);
     }
     30% {
-      transform: scale(1.3);
+      transform: scale(1.2);
     }
     45% {
       transform: scale(1);
