@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import banner from "./banner.png";
 import Collapsable from "./Collapsable";
-import PlusIcon from "./PlusIcon";
+import XemThemIcon from "./XemThemIcon";
+import ArrowGoldIcon from "./ArrowGoldIcon";
 
 type RightContentsDesktopProps = {};
 export default function RightContentsDesktop(
@@ -52,83 +53,82 @@ export default function RightContentsDesktop(
             open={current === "1"}
             onToggle={() => setCurrent(current !== "1" ? "1" : "")}
           >
-            <PlusIcon />
             <Typography>
               <strong>TÂM ĐIỂM NGOẠI GIAO</strong>
               <br />
-              1. Trung tâm hành chính Đà Nẵng
+              <ArrowGoldIcon /> Trung tâm hành chính Đà Nẵng
               <br />
-              2. Sân bay quốc tế Đà Nẵng
+              <ArrowGoldIcon /> Sân bay quốc tế Đà Nẵng
               <br />
-              3. Cung thể thao quốc tế Tiên Sơn
+              <ArrowGoldIcon /> Cung thể thao quốc tế Tiên Sơn
               <br />
-              4. Trung tâm hội nghị quốc tế Ariyana Đà Nẵng
+              <ArrowGoldIcon /> Trung tâm hội nghị quốc tế Ariyana Đà Nẵng
             </Typography>
           </Collapsable>
           <Collapsable
             open={current === "2"}
             onToggle={() => setCurrent(current !== "2" ? "2" : "")}
           >
-            <PlusIcon />
             <Typography>
               <strong>HỘI TỤ CÁC THƯƠNG HIỆU QUỐC TẾ</strong>
               <br />
-              Hilton Da Nang
+              <ArrowGoldIcon /> Hilton Da Nang
               <br />
-              Pullman Danang Beach Resort
+              <ArrowGoldIcon /> Pullman Danang Beach Resort
               <br />
-              Four Points by Sheraton Danang
+              <ArrowGoldIcon /> Four Points by Sheraton Danang
               <br />
-              Novotel Danang Premier Han River
+              <ArrowGoldIcon /> Novotel Danang Premier Han River
             </Typography>
           </Collapsable>
           <Collapsable
             open={current === "3"}
             onToggle={() => setCurrent(current !== "3" ? "3" : "")}
           >
-            <PlusIcon />
             <Typography>
               <strong>HỆ THỐNG Y TẾ GIÁO DỤC QUỐC TẾ</strong>
               <br />
-              Trường Quốc tế Hoa Kỳ APU
+              <ArrowGoldIcon /> Trường Quốc tế Hoa Kỳ APU
               <br />
-              Trường Quốc tế song ngữ Đà Nẵng
+              <ArrowGoldIcon /> Trường Quốc tế song ngữ Đà Nẵng
               <br />
-              Trường Quốc tế St.Nicholas
+              <ArrowGoldIcon /> Trường Quốc tế St.Nicholas
               <br />
-              Trường Mầm non Việt Nhật
+              <ArrowGoldIcon /> Trường Mầm non Việt Nhật
               <br />
-              Bệnh viện Đa khoa Quốc tế Vinmec
+              <ArrowGoldIcon /> Bệnh viện Đa khoa Quốc tế Vinmec
               <br />
-              Bệnh viện Hoàn Mỹ Đà Nẵng
+              <ArrowGoldIcon /> Bệnh viện Hoàn Mỹ Đà Nẵng
             </Typography>
           </Collapsable>
           <Collapsable
             open={current === "4"}
             onToggle={() => setCurrent(current !== "4" ? "4" : "")}
           >
-            <PlusIcon />
             <Typography>
               <strong>TRUNG TÂM THƯƠNG MẠI GIẢI TRÍ - NGHỆ THUẬT</strong>
               <br />
-              Quảng trường trung tâm Đà Nẵng
+              <ArrowGoldIcon /> Quảng trường trung tâm Đà Nẵng
               <br />
-              Trung tâm thương mại Vincom Đà Nẵng
+              <ArrowGoldIcon /> Trung tâm thương mại Vincom Đà Nẵng
               <br />
-              Trung tâm thương mại Indochina Riverside
+              <ArrowGoldIcon /> Trung tâm thương mại Indochina Riverside
               <br />
-              Chợ Hàn
+              <ArrowGoldIcon /> Chợ Hàn
               <br />
-              Nhà hát Trưng Vương
+              <ArrowGoldIcon /> Nhà hát Trưng Vương
               <br />
-              Bảo tàng Đà Nẵng
+              <ArrowGoldIcon /> Bảo tàng Đà Nẵng
               <br />
-              Bảo tàng Mỹ thuật Đà Nẵng
+              <ArrowGoldIcon /> Bảo tàng Mỹ thuật Đà Nẵng
               <br />
-              Bảo tàng điêu khắc Chăm Đà Nẵng
+              <ArrowGoldIcon /> Bảo tàng điêu khắc Chăm Đà Nẵng
             </Typography>
           </Collapsable>
         </Box>
+        <XemThemIcon
+          sx={{ height: "3rem", width: "auto", mr: "auto", mt: 3 }}
+        />
       </Stack>
     </Box>
   );

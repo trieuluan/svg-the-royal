@@ -2,14 +2,15 @@ import AnimateContentWrapper from "./AnimateContentWrapper";
 import mark from "./mark.png";
 import { SvgIconProps } from "@mui/material";
 import SplashMark from "../commons/SplashMark";
+import mapLayer from "./map-layer.png";
 
 type ContentProps = {};
 export default function Content(props: SvgIconProps): JSX.Element {
   return (
     <AnimateContentWrapper
-      width="944.761"
+      width="1003.49"
       height="928.229"
-      viewBox="0 0 944.761 928.229"
+      viewBox="0 0 1003.49 928.229"
       {...props}
     >
       <defs>
@@ -278,6 +279,7 @@ export default function Content(props: SvgIconProps): JSX.Element {
           xlinkHref="#linear-gradient-38"
         />
       </defs>
+      <image href={mapLayer} x={0} y={0} width={1003.49} height={926.87} />
       <path
         id="Path_101"
         data-name="Path 101"

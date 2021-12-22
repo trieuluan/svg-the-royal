@@ -56,7 +56,7 @@ export default function FirstSlideDesktop(props: FirstSlideProps): JSX.Element {
             }}
           >
             <Box sx={{ "& >*": { position: "absolute" } }}>
-              <Content sx={tlwh(2.08, 3.53, 943.66, 926.87)} />
+              <Content sx={tlwh(2.08, 3.53, 1003.49, 926.87)} />
             </Box>
           </StyledAspectRatio>
           <RightContentsDesktop />
