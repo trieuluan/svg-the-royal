@@ -1,31 +1,18 @@
 import { useState } from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, SxProps, Typography } from "@mui/material";
 import banner from "./banner.png";
 import Collapsable from "./Collapsable";
 import XemThemIcon from "./XemThemIcon";
 import ArrowGoldIcon from "./ArrowGoldIcon";
 
-type RightContentsDesktopProps = {};
+type RightContentsDesktopProps = { sx: SxProps; isMobile: boolean };
 export default function RightContentsDesktop(
   props: RightContentsDesktopProps
 ): JSX.Element {
   const [current, setCurrent] = useState("");
   return (
-    <Box
-      sx={{
-        position: "absolute",
-        top: 0,
-        right: 0,
-        left: "50vw",
-        p: "4rem",
-        pl: "2.5rem",
-        "& .MuiTypography-root": {
-          color: "white",
-          fontFamily: "Montserrat",
-        },
-      }}
-    >
-      <Stack gap={2}>
+    <Box sx={props.sx}>
+      <Stack gap={".7em"}>
         <img
           src={banner}
           style={{
@@ -127,7 +114,12 @@ export default function RightContentsDesktop(
           </Collapsable>
         </Box>
         <XemThemIcon
-          sx={{ height: "3rem", width: "auto", mr: "auto", mt: 3 }}
+          sx={{
+            height: "2.5em",
+            width: "auto",
+            mr: "auto",
+            mt: props.isMobile ? ".5em" : "1.5em",
+          }}
         />
       </Stack>
     </Box>

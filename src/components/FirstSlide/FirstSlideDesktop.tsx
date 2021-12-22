@@ -59,7 +59,21 @@ export default function FirstSlideDesktop(props: FirstSlideProps): JSX.Element {
               <Content sx={tlwh(2.08, 3.53, 1003.49, 926.87)} />
             </Box>
           </StyledAspectRatio>
-          <RightContentsDesktop />
+          <RightContentsDesktop
+            isMobile={false}
+            sx={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              left: "50vw",
+              p: "4rem",
+              pl: "2.5rem",
+              "& .MuiTypography-root": {
+                color: "white",
+                fontFamily: "Montserrat",
+              },
+            }}
+          />
         </Box>
       </CssBaseline>
     </ThemeProvider>

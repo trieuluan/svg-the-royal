@@ -17,7 +17,7 @@ export default function Collapsable(
       <Icon sx={{ cursor: "pointer" }} onClick={() => props.onToggle()} />
       <Collapse
         in={props.open}
-        collapsedSize={"1.45rem"}
+        collapsedSize={"1.45em"}
         sx={{ lineHeight: 1.7 }}
       >
         {props.children}
