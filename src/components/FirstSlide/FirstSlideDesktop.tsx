@@ -4,13 +4,15 @@ import {
   CssBaseline,
   styled,
   ThemeProvider,
+  useMediaQuery,
 } from "@mui/material";
 import background from "./Background.png";
 import Content from "./Content";
 import { tlwh } from "../SecondSlide/SecondSlideDesktop";
 import AspectRatio from "../commons/AspectRatio";
-import RightContentsDesktop from "./RightContentsDesktop";
+import FirstSlideContent from "./FirstSlideContent";
 import { sxFullSizeAbsolute } from "@hungphongbk/vth-sdk/utils/predefinedSx";
+import { useMemo } from "react";
 
 const StyledAspectRatio = styled(AspectRatio)`
   @keyframes StrokeLine {
@@ -23,10 +25,13 @@ const StyledAspectRatio = styled(AspectRatio)`
   }
 `;
 
-const theme = createTheme({ typography: { fontSize: 13 } });
-
 type FirstSlideProps = {};
 export default function FirstSlideDesktop(props: FirstSlideProps): JSX.Element {
+  const matches = useMediaQuery("(max-height:768px)");
+  const theme = useMemo(
+    () => createTheme({ typography: { fontSize: matches ? 11 : 13 } }),
+    [matches]
+  );
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline>
@@ -59,7 +64,7 @@ export default function FirstSlideDesktop(props: FirstSlideProps): JSX.Element {
               <Content sx={tlwh(2.08, 3.53, 1003.49, 926.87)} />
             </Box>
           </StyledAspectRatio>
-          <RightContentsDesktop
+          <FirstSlideContent
             isMobile={false}
             sx={{
               position: "absolute",

@@ -6,7 +6,7 @@ import XemThemIcon from "./XemThemIcon";
 import ArrowGoldIcon from "./ArrowGoldIcon";
 
 type RightContentsDesktopProps = { sx: SxProps; isMobile: boolean };
-export default function RightContentsDesktop(
+export default function FirstSlideContent(
   props: RightContentsDesktopProps
 ): JSX.Element {
   const [current, setCurrent] = useState("");
@@ -112,15 +112,31 @@ export default function RightContentsDesktop(
               <ArrowGoldIcon /> Bảo tàng điêu khắc Chăm Đà Nẵng
             </Typography>
           </Collapsable>
+          <Collapsable
+            open={current === "5"}
+            onToggle={() => setCurrent(current !== "5" ? "5" : "")}
+          >
+            <Typography>
+              <strong>TRUNG TÂM CÔNG TRÌNH BIỂU TƯỢNG</strong>
+              <br />
+              <ArrowGoldIcon />
+              Cầu Rồng
+              <br />
+              <ArrowGoldIcon />
+              Cầu Trần Thị Lý
+              <br />
+              <ArrowGoldIcon />
+              Cầu Sông Hàn
+              <br />
+              <ArrowGoldIcon />
+              Tượng Cá Chép Hóa Rồng
+              <br />
+              <ArrowGoldIcon />
+              Vòng quay mặt trời - Asia Park
+            </Typography>
+          </Collapsable>
         </Box>
-        <XemThemIcon
-          sx={{
-            height: "2.5em",
-            width: "auto",
-            mr: "auto",
-            mt: props.isMobile ? ".5em" : "1.5em",
-          }}
-        />
+        <XemThemIcon />
       </Stack>
     </Box>
   );

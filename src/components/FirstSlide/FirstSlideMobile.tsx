@@ -1,4 +1,3 @@
-import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
 import {
   Box,
   createTheme,
@@ -6,11 +5,10 @@ import {
   styled,
   ThemeProvider,
 } from "@mui/material";
-import background from "./BackgroundMobile.png";
-import ContentMobile from "./ContentMobile";
 import { tlwhMob } from "../commons/responsives";
 import AspectRatio from "../commons/AspectRatio";
-import RightContentsDesktop from "./RightContentsDesktop";
+import FirstSlideContent from "./FirstSlideContent";
+import Content from "./Content";
 
 const StyledAspectRatio = styled(AspectRatio)`
   @keyframes StrokeLine {
@@ -33,59 +31,43 @@ export default function FirstSlideMobile(props: FirstSlideProps): JSX.Element {
         <Box
           sx={{
             width: "100vw",
-            height: "100vh",
-            position: "absolute",
-            top: 0,
-            left: 0,
-            bottom: 0,
-            overflow: "hidden",
+            minHeight: "100vh",
+            position: "relative",
+            display: "grid",
+            gridTemplateAreas: '"one" "second"',
+            gridTemplateColumns: "1fr",
+            gridTemplateRows: "1fr auto",
             bgcolor: "#b51f28",
           }}
         >
-          <Box sx={{ ...sxFullSize, position: "relative" }}>
-            <StyledAspectRatio
-              ratio={"414/896"}
-              sx={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                right: 0,
-                "& img.background": {
-                  ...sxFullSize,
-                  top: 0,
-                  left: 0,
-                  objectFit: "cover",
-                  position: "absolute",
-                },
-              }}
-            >
-              <Box
-                sx={{ overflow: "hidden", "& >*": { position: "absolute" } }}
-              >
-                <img className={"background"} src={background} />
-                <ContentMobile
-                  sx={{
-                    ...tlwhMob(510.44, -3.5, 405.29, 398.07),
-                    zIndex: 1,
-                  }}
-                />
-              </Box>
-            </StyledAspectRatio>
-            <RightContentsDesktop
-              isMobile={true}
-              sx={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                p: 4,
-                "& .MuiTypography-root": {
-                  color: "white",
-                  fontFamily: "Montserrat",
-                },
-              }}
-            />
-          </Box>
+          <StyledAspectRatio
+            ratio={"414/896"}
+            sx={{
+              gridArea: "second",
+              marginTop: `-120%`,
+            }}
+          >
+            <Box sx={{ overflow: "hidden", "& >*": { position: "absolute" } }}>
+              <Content
+                sx={{
+                  ...tlwhMob(510.44, -3.5, 405.29, 398.07),
+                  zIndex: 1,
+                }}
+              />
+            </Box>
+          </StyledAspectRatio>
+          <FirstSlideContent
+            isMobile={true}
+            sx={{
+              zIndex: 10000,
+              gridArea: "one",
+              p: 4,
+              "& .MuiTypography-root": {
+                color: "white",
+                fontFamily: "Montserrat",
+              },
+            }}
+          />
         </Box>
       </CssBaseline>
     </ThemeProvider>
