@@ -68,11 +68,12 @@ export default function FirstSlideDesktop(props: FirstSlideProps): JSX.Element {
             isMobile={false}
             sx={{
               position: "absolute",
-              top: 0,
+              top: "50%",
               right: 0,
               left: "50vw",
               p: "4rem",
               pl: "2.5rem",
+              transform: "translateY(-50%)",
               "& .MuiTypography-root": {
                 color: "white",
                 fontFamily: "Montserrat",

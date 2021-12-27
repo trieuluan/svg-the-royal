@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Box, Stack, SxProps, Typography } from "@mui/material";
-import banner from "./banner.png";
 import Collapsable from "./Collapsable";
 import XemThemIcon from "./XemThemIcon";
 import ArrowGoldIcon from "./ArrowGoldIcon";
+import "../commons/fonts.css";
+import GoldTypography from "../commons/GoldTypography";
 
 type RightContentsDesktopProps = { sx: SxProps; isMobile: boolean };
 export default function FirstSlideContent(
@@ -13,15 +14,26 @@ export default function FirstSlideContent(
   return (
     <Box sx={props.sx}>
       <Stack gap={".7em"}>
-        <img
-          src={banner}
-          style={{
-            width: "100%",
-            maxHeight: "15vh",
-            objectFit: "contain",
-            objectPosition: "left",
-          }}
-        />
+        <Box>
+          <GoldTypography
+            sx={{
+              fontFamily: "Rosellinda !important",
+              fontSize: "6em",
+              pl: ".1em",
+            }}
+          >
+            Địa Thế Vàng
+          </GoldTypography>
+          <GoldTypography
+            sx={{
+              fontFamily: "Megante !important",
+              fontSize: "2.8em",
+              mt: "-.5em",
+            }}
+          >
+            TRÊN ĐẠI LỘ DANH GIÁ
+          </GoldTypography>
+        </Box>
         <Typography>
           The Royal Đà Nẵng sở hữu vị trí "3 tốt" trong quan niệm xưa nay của cả
           Đông - Tây, bao gồm gần các trung tâm thương mại sầm uất, gần sông và
@@ -34,6 +46,9 @@ export default function FirstSlideContent(
             display: "grid",
             gridTemplateColumns: "25px 1fr",
             gridGap: 10,
+            "& strong": {
+              cursor: "pointer",
+            },
           }}
         >
           <Collapsable
@@ -41,7 +56,9 @@ export default function FirstSlideContent(
             onToggle={() => setCurrent(current !== "1" ? "1" : "")}
           >
             <Typography>
-              <strong>TÂM ĐIỂM NGOẠI GIAO</strong>
+              <strong onClick={() => setCurrent(current !== "1" ? "1" : "")}>
+                TÂM ĐIỂM NGOẠI GIAO
+              </strong>
               <br />
               <ArrowGoldIcon /> Trung tâm hành chính Đà Nẵng
               <br />
@@ -57,7 +74,9 @@ export default function FirstSlideContent(
             onToggle={() => setCurrent(current !== "2" ? "2" : "")}
           >
             <Typography>
-              <strong>HỘI TỤ CÁC THƯƠNG HIỆU QUỐC TẾ</strong>
+              <strong onClick={() => setCurrent(current !== "2" ? "2" : "")}>
+                HỘI TỤ CÁC THƯƠNG HIỆU QUỐC TẾ
+              </strong>
               <br />
               <ArrowGoldIcon /> Hilton Da Nang
               <br />
@@ -73,7 +92,9 @@ export default function FirstSlideContent(
             onToggle={() => setCurrent(current !== "3" ? "3" : "")}
           >
             <Typography>
-              <strong>HỆ THỐNG Y TẾ GIÁO DỤC QUỐC TẾ</strong>
+              <strong onClick={() => setCurrent(current !== "3" ? "3" : "")}>
+                HỆ THỐNG Y TẾ GIÁO DỤC QUỐC TẾ
+              </strong>
               <br />
               <ArrowGoldIcon /> Trường Quốc tế Hoa Kỳ APU
               <br />
@@ -93,7 +114,9 @@ export default function FirstSlideContent(
             onToggle={() => setCurrent(current !== "4" ? "4" : "")}
           >
             <Typography>
-              <strong>TRUNG TÂM THƯƠNG MẠI GIẢI TRÍ - NGHỆ THUẬT</strong>
+              <strong onClick={() => setCurrent(current !== "4" ? "4" : "")}>
+                TRUNG TÂM THƯƠNG MẠI GIẢI TRÍ - NGHỆ THUẬT
+              </strong>
               <br />
               <ArrowGoldIcon /> Quảng trường trung tâm Đà Nẵng
               <br />
@@ -117,7 +140,9 @@ export default function FirstSlideContent(
             onToggle={() => setCurrent(current !== "5" ? "5" : "")}
           >
             <Typography>
-              <strong>TRUNG TÂM CÔNG TRÌNH BIỂU TƯỢNG</strong>
+              <strong onClick={() => setCurrent(current !== "5" ? "5" : "")}>
+                TRUNG TÂM CÔNG TRÌNH BIỂU TƯỢNG
+              </strong>
               <br />
               <ArrowGoldIcon />
               Cầu Rồng
