@@ -1,4 +1,4 @@
-import background from "./Slide2.png";
+import background from "./Slide2.webp";
 import { Box, styled } from "@mui/material";
 import FirstLabel from "./FirstLabel";
 import FirstLine from "./FirstLine";

@@ -6,7 +6,7 @@ import {
   ThemeProvider,
   useMediaQuery,
 } from "@mui/material";
-import background from "./Background.png";
+import background from "./Background.webp";
 import Content from "./Content";
 import { tlwh } from "../SecondSlide/SecondSlideDesktop";
 import AspectRatio from "../commons/AspectRatio";

@@ -10,7 +10,7 @@ type RightContentsDesktopProps = { sx: SxProps; isMobile: boolean };
 export default function FirstSlideContent(
   props: RightContentsDesktopProps
 ): JSX.Element {
-  const [current, setCurrent] = useState("");
+  const [current, setCurrent] = useState("1");
   return (
     <Box sx={props.sx}>
       <Stack gap={".7em"}>

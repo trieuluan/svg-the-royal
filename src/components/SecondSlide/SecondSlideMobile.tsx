@@ -1,4 +1,4 @@
-import background from "./Slide2Mobile.png";
+import background from "./Slide2Mobile.webp";
 import { Box } from "@mui/material";
 import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
 import { SlideContext } from "./Context";

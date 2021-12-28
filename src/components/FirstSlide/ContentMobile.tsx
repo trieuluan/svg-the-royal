@@ -1,6 +1,6 @@
 import { SvgIconProps } from "@mui/material";
 import AnimateContentWrapper from "./AnimateContentWrapper";
-import mark from "./mark.png";
+import mark from "./mark.webp";
 import SplashMark from "../commons/SplashMark";
 
 type ContentMobileProps = {};
