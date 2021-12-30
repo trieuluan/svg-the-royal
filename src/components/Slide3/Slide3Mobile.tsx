@@ -1,5 +1,5 @@
 import { Box, Stack } from "@mui/material";
-import background from "./bg-mobile.png";
+import background from "./bg-mobile.webp";
 import { tlwhM } from "./utils";
 import ContentDesktop from "./ContentDesktop";
 import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";

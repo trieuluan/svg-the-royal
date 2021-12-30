@@ -1,9 +1,9 @@
 import { Box, Stack, styled } from "@mui/material";
-import background from "./bg.png";
+import background from "./bg.webp";
 import ContentDesktop from "./ContentDesktop";
 import { tlwhD } from "./utils";
 import AspectRatio from "../commons/AspectRatio";
-import text1desktop from "./text1-desktop.png";
+import text1desktop from "./text1-desktop.webp";
 import text2desktop from "./text-2-desktop.png";
 import text3desktop from "./text-3-desktop.png";
 import { m } from "framer-motion";
