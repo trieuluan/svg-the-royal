@@ -18,7 +18,7 @@ export default function Collapsable(
       <Collapse
         in={props.open}
         collapsedSize={"1.45em"}
-        sx={{ lineHeight: 1.7 }}
+        sx={{ lineHeight: 1.7, "& strong": { fontWeight: 500 } }}
       >
         {props.children}
       </Collapse>

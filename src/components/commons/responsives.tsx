@@ -34,14 +34,10 @@ export function Responsive(props: {
   d: ComponentType<any>;
   m: ComponentType<any>;
 }): JSX.Element {
-  return (
-    <>
-      <Desktop>
-        <props.d />
-      </Desktop>
-      <Mobile>
-        <props.m />
-      </Mobile>
-    </>
-  );
+  const isMobile = useMediaQuery({ maxWidth: 992 });
+  const isIpadProPortrait = useMediaQuery({
+    query:
+      "(min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)",
+  });
+  return <>{isMobile || isIpadProPortrait ? <props.m /> : <props.d />}</>;
 }
