@@ -21,7 +21,7 @@ const StyledAspectRatio = styled(AspectRatio)`
   }
 `;
 
-const theme = createTheme({ typography: { fontSize: 9 } });
+const theme = createTheme({ typography: { fontSize: 10.5 } });
 
 type FirstSlideProps = {};
 export default function FirstSlideMobile(props: FirstSlideProps): JSX.Element {

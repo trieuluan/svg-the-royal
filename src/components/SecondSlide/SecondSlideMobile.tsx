@@ -48,7 +48,7 @@ export default function SecondSlideMobile(
         }}
       >
         <img src={background} />
-        <SlideLabel sx={tlwh(62, 36, 284, 74)} />
+        <SlideLabel sx={tlwh(62, 36, 300, 74)} isMobile={true} />
         <SlideContext.Provider value={[content, setContent]}>
           {/*<FirstLine*/}
           {/*  sx={{*/}

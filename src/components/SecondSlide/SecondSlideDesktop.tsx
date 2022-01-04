@@ -75,7 +75,10 @@ export default function SecondSlideDesktop(
               },
             }}
           >
-            <SlideLabel sx={tlwh(55.78, 179.42, 611.88, 134.67)} />
+            <SlideLabel
+              sx={tlwh(55.78, 179.42, 700, 134.67)}
+              isMobile={false}
+            />
             <SlideContext.Provider value={[content, setContent]}>
               <FirstLine
                 sx={{
