@@ -6,6 +6,7 @@ import "./App.css";
 import FirstSlide from "./components/FirstSlide";
 import SecondSlide from "./components/SecondSlide/SecondSlide";
 import Slide3 from "./components/Slide3";
+import SlideDautuhoanmy from "./components/slide-dautuhoanmy";
 
 function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
           <Route path={"1"} element={<SecondSlide />} />
           <Route path={"2"} element={<FirstSlide />} />
           <Route path={"3"} element={<Slide3 />} />
+          <Route path={"dau-tu-hoan-my"} element={<SlideDautuhoanmy />} />
         </Routes>
       </HashRouter>
     </LazyMotion>

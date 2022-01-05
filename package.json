@@ -55,7 +55,7 @@
     "tsc": "./node_modules/.bin/tsc",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "craco start",
+    "start": "PORT=3001 craco start",
     "build": "REACT_APP_ENV=web craco build",
     "build:plugin": "./build.sh",
     "test": "craco test",
