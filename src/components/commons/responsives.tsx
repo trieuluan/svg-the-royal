@@ -30,14 +30,27 @@ export const tlwhMob = (y: number, x: number, w: number, h: number) => ({
   height: getYSizeMob(h),
 });
 
-export function Responsive(props: {
+export function Responsive({
+  d: Desktop,
+  m: Mobile,
+  ...props
+}: {
   d: ComponentType<any>;
   m: ComponentType<any>;
+  [key: string]: any;
 }): JSX.Element {
   const isMobile = useMediaQuery({ maxWidth: 992 });
   const isIpadProPortrait = useMediaQuery({
     query:
       "(min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)",
   });
-  return <>{isMobile || isIpadProPortrait ? <props.m /> : <props.d />}</>;
+  return (
+    <>
+      {isMobile || isIpadProPortrait ? (
+        <Mobile {...props} />
+      ) : (
+        <Desktop {...props} />
+      )}
+    </>
+  );
 }
