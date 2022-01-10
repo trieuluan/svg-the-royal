@@ -7,7 +7,7 @@ import {
   useRef,
 } from "react";
 import { useCycledList } from "./use-cycled-list";
-import { Box, styled } from "@mui/material";
+import { Box, SxProps } from "@mui/material";
 import { AnimatePresence, m } from "framer-motion";
 import { SizeMeProps, withSize } from "react-sizeme";
 
@@ -17,27 +17,23 @@ type MotionSlideProps = PropsWithChildren<
   {
     slidesToShow: number;
     speed?: number;
+    animationSpeed?: number;
+    indicatorSxProps?: SxProps;
   } & SizeMeProps
 >;
 
-const MotionBox = m(Box),
-  StyledMotionBox = styled(MotionBox)`
-    &:first-child,
-    &:last-child {
-      opacity: 0 !important;
-    }
-  `;
+const MotionBox = m(Box);
 
 const MotionSlide = withSize()(function MotionSlide(
   props: MotionSlideProps
 ): JSX.Element {
-  const [newChildren, prev, next] = useCycledList(
+  const { animationSpeed = 0.55, indicatorSxProps } = props;
+  const [newChildren, prev, next, { current }] = useCycledList(
     Children.toArray(props.children) as unknown as ReactElement[],
     {
       size: props.slidesToShow + 2,
     }
   );
-
   const center = Math.round((props.slidesToShow + 1) / 2);
 
   const intervalRef = useRef<NodeJS.Timeout>();
@@ -54,26 +50,44 @@ const MotionSlide = withSize()(function MotionSlide(
   }, [props.slidesToShow, props.size]);
 
   const variants = useMemo(() => {
-    return {
-      initial: { opacity: 0, x: "200%", flex: 0 },
-      animate: (index: number) => ({
-        opacity: index === 0 || index === props.slidesToShow + 1 ? 0 : 1,
-        x: 0,
-        flex: index === center ? 2 : 1,
+      return {
+        initial: { opacity: 0, x: "200%", flex: 0 },
+        animate: ({ index }: { index: number }) => ({
+          opacity: index === 0 || index === props.slidesToShow + 1 ? 0 : 1,
+          x: 0,
+          flex: index === center ? 2 : 1,
+        }),
+        exit: { opacity: 0, x: "-200%", flex: 0 },
+      };
+    }, [center, props.slidesToShow]),
+    innerVariants = useMemo(
+      () => ({
+        initial: {
+          // display: "none",
+          width: 0,
+        },
+        animate: ({ index }: { index: number }) => ({
+          // display: "block",
+          width: slideWidth,
+          scale: index === center ? 1.8 : 1,
+        }),
+        exit: {
+          // display: "none",
+          width: 0,
+        },
       }),
-      exit: { opacity: 0, x: "-200%", flex: 0 },
-    };
-  }, [center, props.slidesToShow]);
+      [center, slideWidth]
+    );
 
   return (
     <Box>
       <Box
         sx={{
           display: "flex",
-          gap: `${GAP}px`,
           alignItems: "center",
           height: 300,
           transform: `translateY(-50%)`,
+          gap: `${GAP}px`,
           ml: `-${slideWidth}px`,
           mr: `-${slideWidth}px`,
         }}
@@ -84,19 +98,40 @@ const MotionSlide = withSize()(function MotionSlide(
               <MotionBox
                 layout
                 key={child.key}
-                transition={{ duration: 0.55 }}
+                transition={{ duration: animationSpeed }}
                 variants={variants}
                 initial={"initial"}
                 animate={"animate"}
                 exit={"exit"}
                 style={{ originX: 0.5, originY: 0.5 }}
-                custom={index}
+                sx={{ display: "flex", justifyContent: "center" }}
+                custom={{ index }}
+                className={index === center ? "center" : ""}
               >
-                {child}
+                <MotionBox
+                  layout
+                  variants={innerVariants}
+                  transition={{ duration: animationSpeed }}
+                  custom={{ index }}
+                  style={{
+                    width: slideWidth,
+                  }}
+                >
+                  {child}
+                </MotionBox>
               </MotionBox>
             );
           })}
         </AnimatePresence>
+      </Box>
+      <Box sx={indicatorSxProps}>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: `repeat(${props.slidesToShow},1fr)`,
+            gridGap: "20px",
+          }}
+        ></Box>
       </Box>
     </Box>
   );

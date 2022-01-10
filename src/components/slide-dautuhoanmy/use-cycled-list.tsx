@@ -3,6 +3,7 @@ import {
   cloneElement,
   ReactElement,
   useCallback,
+  useMemo,
   useRef,
   useState,
 } from "react";
@@ -15,7 +16,7 @@ type Callback = () => void;
 export function useCycledList<T extends ReactElement>(
   list: T[],
   { size }: UseCycledListOptions
-): [T[], Callback, Callback] {
+): [T[], Callback, Callback, { current: number }] {
   const doubledList = useRef([
     ...list,
     ...(Children.map(list, (child, i) =>
@@ -25,28 +26,44 @@ export function useCycledList<T extends ReactElement>(
   const [returnedList, setReturnedList] = useState<T[]>(() =>
       doubledList.current.slice(0, size)
     ),
-    pos = useRef(size - 1);
+    [pos, setPos] = useState(size - 1);
+
+  const middle = useMemo(() => {
+    let rs = pos - (size - 1) / 2;
+    if (rs < 0) rs += list.length;
+    if (rs >= list.length) rs -= list.length;
+    return rs;
+  }, [pos, size, list.length]);
 
   const next = useCallback(() => {
-    pos.current = (pos.current + 1) % doubledList.current.length;
+    const newPos = (pos + 1) % doubledList.current.length;
     const newReturnedList = produce(returnedList, (draft) => {
       draft.shift();
-      draft.push(doubledList.current[pos.current] as unknown as Draft<T>);
+      draft.push(doubledList.current[newPos] as unknown as Draft<T>);
     });
     setReturnedList(newReturnedList);
-  }, [returnedList]);
+    setPos(newPos);
+  }, [returnedList, pos]);
 
   const previous = useCallback(() => {
-    pos.current--;
-    if (pos.current < 0) pos.current += list.length;
-    let headPos = pos.current - list.length;
+    let newPos = pos - 1;
+    if (newPos < 0) newPos += list.length;
+    let headPos = newPos - list.length;
     if (headPos < 0) headPos += list.length;
     const newReturnedList = produce(returnedList, (draft) => {
       draft.pop();
       draft.unshift(list[headPos] as unknown as Draft<T>);
     });
     setReturnedList(newReturnedList);
-  }, [list, returnedList]);
+    setPos(newPos);
+  }, [list, returnedList, pos]);
 
-  return [returnedList, previous, next];
+  return [
+    returnedList,
+    previous,
+    next,
+    {
+      current: middle,
+    },
+  ];
 }

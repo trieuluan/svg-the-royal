@@ -1,9 +1,10 @@
 import { HoanMySlidesData } from "../assets/hoanmy";
-import { Box, Stack, styled } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 import bg from "./bg-desktop.webp";
 import { AspectRatio } from "@hungphongbk/vth-sdk";
 import useWindowDimensions from "../commons/responsives";
 import MotionSlide from "./motion-slide";
+import "./raleway.css";
 
 type DesktopProps = {
   slidesData: HoanMySlidesData;
@@ -25,6 +26,22 @@ const BgBox = styled(Box)`
     background-color: rgba(0, 0, 0, 0.46);
     display: block;
     content: "";
+  }
+`;
+const StyledText = styled(Typography)`
+  color: #a01f26;
+  font-weight: 600;
+  text-align: center;
+  font-size: 12px;
+  font-family: Raleway;
+  display: inline-block;
+
+  will-change: transform;
+  transition: transform 0.6s ease;
+  transform: scale(1);
+  transform-origin: top center;
+  .center & {
+    transform: translateY(-0.5rem) scale(0.75);
   }
 `;
 
@@ -57,18 +74,32 @@ export default function Desktop(props: DesktopProps): JSX.Element {
       <Box
         sx={{
           position: "absolute",
-          top: "66.66vh",
+          top: "calc(66.66vh - 1rem)",
           left: `${10000.0 / 1920}vw`,
           right: `${10000.0 / 1920}vw`,
         }}
       >
-        <MotionSlide slidesToShow={5} speed={3000}>
+        <MotionSlide slidesToShow={5} speed={3000} animationSpeed={0.6}>
           {props.slidesData.slides.map((slide) => (
-            <Stack gap={2} key={slide.id} data-key={slide.id}>
+            <Box
+              key={slide.id}
+              data-key={slide.id}
+              sx={{ position: "relative" }}
+            >
               <AspectRatio ratio={"4/3"}>
                 <img src={slide.params.bg.image} />
               </AspectRatio>
-            </Stack>
+              <StyledText
+                sx={{
+                  position: "absolute",
+                  top: `calc(100% + 16px)`,
+                  left: 0,
+                  right: 0,
+                }}
+              >
+                {slide.layers[1].text}
+              </StyledText>
+            </Box>
           ))}
         </MotionSlide>
       </Box>
