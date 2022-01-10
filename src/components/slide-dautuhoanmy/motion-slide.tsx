@@ -7,11 +7,27 @@ import {
   useRef,
 } from "react";
 import { useCycledList } from "./use-cycled-list";
-import { Box, SxProps } from "@mui/material";
+import { Box, css, styled, SxProps } from "@mui/material";
 import { AnimatePresence, m } from "framer-motion";
 import { SizeMeProps, withSize } from "react-sizeme";
+import { range } from "lodash";
 
 const GAP = 16;
+
+const Bullet = styled(Box)<{ isActive: boolean }>`
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  border: 1px solid #333;
+  ${(props: any) =>
+    props.isActive &&
+    css`
+      border-color: #a01f26;
+      background-color: #a01f26;
+      outline: 1px solid #a01f26;
+      outline-offset: 0.45rem;
+    `}
+`;
 
 type MotionSlideProps = PropsWithChildren<
   {
@@ -129,9 +145,13 @@ const MotionSlide = withSize()(function MotionSlide(
           sx={{
             display: "grid",
             gridTemplateColumns: `repeat(${props.slidesToShow},1fr)`,
-            gridGap: "20px",
+            gridGap: "2rem",
           }}
-        ></Box>
+        >
+          {range(props.slidesToShow).map((index) => (
+            <Bullet isActive={index === current}></Bullet>
+          ))}
+        </Box>
       </Box>
     </Box>
   );

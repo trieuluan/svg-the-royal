@@ -79,7 +79,17 @@ export default function Desktop(props: DesktopProps): JSX.Element {
           right: `${10000.0 / 1920}vw`,
         }}
       >
-        <MotionSlide slidesToShow={5} speed={3000} animationSpeed={0.6}>
+        <MotionSlide
+          slidesToShow={5}
+          speed={3000}
+          animationSpeed={0.6}
+          indicatorSxProps={{
+            position: "fixed",
+            bottom: "3rem",
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
+        >
           {props.slidesData.slides.map((slide) => (
             <Box
               key={slide.id}
