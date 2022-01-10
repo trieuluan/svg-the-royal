@@ -1,5 +1,5 @@
 import { useMediaQuery } from "react-responsive";
-import { ComponentType } from "react";
+import { ComponentType, useEffect, useState } from "react";
 
 export const Desktop = ({ children }: any) => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -53,4 +53,29 @@ export function Responsive({
       )}
     </>
   );
+}
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height,
+  };
+}
+
+export default function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
 }
