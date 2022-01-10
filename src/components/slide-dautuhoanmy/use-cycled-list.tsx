@@ -1,28 +1,40 @@
-import { useCallback, useRef, useState } from "react";
+import {
+  Children,
+  cloneElement,
+  ReactElement,
+  useCallback,
+  useRef,
+  useState,
+} from "react";
 import produce, { Draft } from "immer";
 
 export type UseCycledListOptions = {
   size: number;
 };
 type Callback = () => void;
-export function useCycledList<T>(
+export function useCycledList<T extends ReactElement>(
   list: T[],
   { size }: UseCycledListOptions
 ): [T[], Callback, Callback] {
+  const doubledList = useRef([
+    ...list,
+    ...(Children.map(list, (child, i) =>
+      cloneElement(child, { key: `cloned__${i}` })
+    ) as unknown as T[]),
+  ]);
   const [returnedList, setReturnedList] = useState<T[]>(() =>
-      list.slice(0, size)
+      doubledList.current.slice(0, size)
     ),
     pos = useRef(size - 1);
 
   const next = useCallback(() => {
-    pos.current = (pos.current + 1) % list.length;
-    console.log(pos);
+    pos.current = (pos.current + 1) % doubledList.current.length;
     const newReturnedList = produce(returnedList, (draft) => {
       draft.shift();
-      draft.push(list[pos.current] as unknown as Draft<T>);
+      draft.push(doubledList.current[pos.current] as unknown as Draft<T>);
     });
     setReturnedList(newReturnedList);
-  }, [list, returnedList]);
+  }, [returnedList]);
 
   const previous = useCallback(() => {
     pos.current--;

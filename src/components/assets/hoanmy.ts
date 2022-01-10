@@ -87,18 +87,5 @@ export const hoanmyDemo: HoanMySlidesData = {
         },
       },
     },
-    {
-      id: 17,
-      params: {
-        bg: {
-          image: hoanmy5,
-        },
-      },
-      layers: {
-        1: {
-          text: "Điểm hẹn Networking của giới tinh hoa",
-        },
-      },
-    },
   ],
 };
