@@ -139,12 +139,12 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
             display: "flex",
             alignItems: "center",
             gap: `${gap}px`,
-            ml: `-${slideWidth}px`,
-            mr: `-${slideWidth}px`,
+            ml: `-${slideWidth + gap}px`,
+            mr: `-${slideWidth + gap}px`,
             ...sx,
           }}
         >
-          <AnimatePresence>
+          <AnimatePresence initial={false}>
             {newChildren.map((child, index) => {
               return (
                 <MotionBox

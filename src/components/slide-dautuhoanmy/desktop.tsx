@@ -118,7 +118,12 @@ export default function Desktop(props: DesktopProps): JSX.Element {
             </Box>
           ))}
         </MotionSlide>
-        <Gallery open={showGallery} slidesData={props.slidesData} initial={1} />
+        <Gallery
+          open={showGallery}
+          slidesData={props.slidesData}
+          initial={1}
+          onClose={() => setShowGallery(false)}
+        />
       </Box>
     </Box>
   );
