@@ -4,7 +4,7 @@ import hoanmy3 from "./hoanmy3.webp";
 import hoanmy4 from "./hoanmy4.webp";
 import hoanmy5 from "./hoanmy5.webp";
 
-type SlideData = {
+export type SlideData = {
   id: number;
   params: {
     bg: {

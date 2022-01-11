@@ -5,6 +5,8 @@ import { AspectRatio } from "@hungphongbk/vth-sdk";
 import useWindowDimensions from "../commons/responsives";
 import MotionSlide from "./motion-slide";
 import "./raleway.css";
+import Gallery from "./gallery";
+import { useState } from "react";
 
 type DesktopProps = {
   slidesData: HoanMySlidesData;
@@ -46,7 +48,8 @@ const StyledText = styled(Typography)`
 `;
 
 export default function Desktop(props: DesktopProps): JSX.Element {
-  const { width, height } = useWindowDimensions();
+  const { width, height } = useWindowDimensions(),
+    [showGallery, setShowGallery] = useState(false);
   return (
     <Box
       sx={{
@@ -81,7 +84,7 @@ export default function Desktop(props: DesktopProps): JSX.Element {
       >
         <MotionSlide
           slidesToShow={5}
-          speed={3000}
+          speed={showGallery ? 0 : 3000}
           animationSpeed={0.6}
           indicatorSxProps={{
             position: "fixed",
@@ -89,12 +92,15 @@ export default function Desktop(props: DesktopProps): JSX.Element {
             left: "50%",
             transform: "translateX(-50%)",
           }}
+          centerMode
+          sx={{ transform: `translateY(-50%)`, height: 300 }}
         >
           {props.slidesData.slides.map((slide) => (
             <Box
               key={slide.id}
               data-key={slide.id}
-              sx={{ position: "relative" }}
+              sx={{ position: "relative", cursor: "pointer" }}
+              onClick={() => setShowGallery(true)}
             >
               <AspectRatio ratio={"4/3"}>
                 <img src={slide.params.bg.image} />
@@ -112,6 +118,7 @@ export default function Desktop(props: DesktopProps): JSX.Element {
             </Box>
           ))}
         </MotionSlide>
+        <Gallery open={showGallery} slidesData={props.slidesData} initial={1} />
       </Box>
     </Box>
   );
