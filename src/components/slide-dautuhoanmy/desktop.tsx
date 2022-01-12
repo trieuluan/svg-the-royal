@@ -113,7 +113,7 @@ export default function Desktop(props: DesktopProps): JSX.Element {
                   right: 0,
                 }}
               >
-                {slide.layers[1].text}
+                {slide.layers[0].text}
               </StyledText>
             </Box>
           ))}

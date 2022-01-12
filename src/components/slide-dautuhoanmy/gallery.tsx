@@ -117,7 +117,7 @@ export default function Gallery({
                           color: "white",
                         }}
                       >
-                        {slide.layers["1"].text}
+                        {slide.layers[0].text}
                       </Typography>
                     </Portal>
                     <AspectRatio ratio={"4/3"}>

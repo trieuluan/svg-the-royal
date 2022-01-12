@@ -12,7 +12,7 @@ export type SlideData = {
     };
   };
   layers: {
-    1: {
+    [key: string | number]: {
       text: string;
     };
   };

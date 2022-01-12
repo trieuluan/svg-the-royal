@@ -16,8 +16,13 @@ import { HoanMySlidesData } from "./components/assets/hoanmy";
       "svg-animation-dau-tu-hoan-my",
       () => (
         <SlideDautuhoanmy
-          // @ts-ignore
-          slidesData={window.__SLIDE_DATA__ as unknown as HoanMySlidesData}
+          slidesData={
+            // @ts-ignore
+            JSON.parse(
+              document.getElementById("__SLIDE_DATA_DAU_TU_HOAN_MY__")!
+                .textContent!
+            ) as unknown as HoanMySlidesData
+          }
         />
       ),
     ],
