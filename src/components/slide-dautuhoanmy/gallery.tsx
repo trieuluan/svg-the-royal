@@ -74,6 +74,8 @@ export default function Gallery({
             gridGap: "1rem",
             padding: "1rem",
             alignItems: "center",
+            width: "100%",
+            height: "100%",
           }}
         >
           <CaptionBox ref={captionRef}></CaptionBox>

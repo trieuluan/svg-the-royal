@@ -60,7 +60,7 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
       outerSx,
       gap = 16,
     } = props;
-    const [newChildren, prev, next, { current }] = useCycledList(
+    const [newChildren, prev, next, { current, direction }] = useCycledList(
       Children.toArray(props.children) as unknown as ReactElement[],
       {
         size: props.slidesToShow + 2,
@@ -71,6 +71,10 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
       next,
       prev,
     }));
+
+    useEffect(() => {
+      console.log(newChildren.map((c) => c.key));
+    }, [newChildren]);
 
     const center = useMemo(
       () => Math.round((props.slidesToShow + 1) / 2),
@@ -104,15 +108,23 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
 
     const variants = useMemo(() => {
         return {
-          initial: { opacity: 0, x: "200%", flex: 0 },
+          initial: {
+            opacity: 0,
+            x: direction === "prev" ? "-200%" : "200%",
+            flex: 0,
+          },
           animate: ({ index }: { index: number }) => ({
             opacity: index === 0 || index === props.slidesToShow + 1 ? 0 : 1,
             x: 0,
             flex: isCenter(index) ? 2 : 1,
           }),
-          exit: { opacity: 0, x: "-200%", flex: 0 },
+          exit: {
+            opacity: 0,
+            x: direction === "prev" ? "200%" : "-200%",
+            flex: 0,
+          },
         };
-      }, [isCenter, props.slidesToShow]),
+      }, [direction, isCenter, props.slidesToShow]),
       innerVariants = useMemo(
         () => ({
           initial: {
@@ -149,7 +161,7 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
               return (
                 <MotionBox
                   layout
-                  key={child.key}
+                  key={`${child.key}`}
                   transition={{ duration: animationSpeed }}
                   variants={variants}
                   initial={"initial"}
@@ -185,7 +197,7 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
             }}
           >
             {range(props.slidesToShow).map((index) => (
-              <Bullet isActive={index === current}></Bullet>
+              <Bullet isActive={index === current} />
             ))}
           </Box>
         </Box>

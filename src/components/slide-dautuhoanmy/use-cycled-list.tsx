@@ -16,7 +16,7 @@ type Callback = () => void;
 export function useCycledList<T extends ReactElement>(
   list: T[],
   { size }: UseCycledListOptions
-): [T[], Callback, Callback, { current: number }] {
+): [T[], Callback, Callback, { current: number; direction: "prev" | "next" }] {
   const doubledList = useRef([
     ...list,
     ...(Children.map(list, (child, i) =>
@@ -26,7 +26,8 @@ export function useCycledList<T extends ReactElement>(
   const [returnedList, setReturnedList] = useState<T[]>(() =>
       doubledList.current.slice(0, size)
     ),
-    [pos, setPos] = useState(size - 1);
+    [pos, setPos] = useState(size - 1),
+    [direction, setDirection] = useState<"prev" | "next">("next");
 
   const middle = useMemo(() => {
     let rs = pos - (size - 1) / 2;
@@ -41,22 +42,24 @@ export function useCycledList<T extends ReactElement>(
       draft.shift();
       draft.push(doubledList.current[newPos] as unknown as Draft<T>);
     });
-    setReturnedList(newReturnedList);
+    setDirection("next");
     setPos(newPos);
+    setReturnedList(newReturnedList);
   }, [returnedList, pos]);
 
   const previous = useCallback(() => {
     let newPos = pos - 1;
-    if (newPos < 0) newPos += list.length;
-    let headPos = newPos - list.length;
-    if (headPos < 0) headPos += list.length;
+    if (newPos < 0) newPos += doubledList.current.length;
+    let headPos = newPos - size;
+    if (headPos < 0) headPos += doubledList.current.length;
     const newReturnedList = produce(returnedList, (draft) => {
       draft.pop();
-      draft.unshift(list[headPos] as unknown as Draft<T>);
+      draft.unshift(doubledList.current[headPos] as unknown as Draft<T>);
     });
-    setReturnedList(newReturnedList);
+    setDirection("prev");
     setPos(newPos);
-  }, [list, returnedList, pos]);
+    setReturnedList(newReturnedList);
+  }, [pos, size, returnedList]);
 
   return [
     returnedList,
@@ -64,6 +67,7 @@ export function useCycledList<T extends ReactElement>(
     next,
     {
       current: middle,
+      direction,
     },
   ];
 }

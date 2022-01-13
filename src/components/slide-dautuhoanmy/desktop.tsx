@@ -77,7 +77,7 @@ export default function Desktop(props: DesktopProps): JSX.Element {
       <Box
         sx={{
           position: "absolute",
-          top: "calc(66.66vh - 1rem)",
+          bottom: 0,
           left: `${10000.0 / 1920}vw`,
           right: `${10000.0 / 1920}vw`,
         }}
@@ -87,13 +87,16 @@ export default function Desktop(props: DesktopProps): JSX.Element {
           speed={showGallery ? 0 : 3000}
           animationSpeed={0.6}
           indicatorSxProps={{
-            position: "fixed",
-            bottom: "3rem",
-            left: "50%",
-            transform: "translateX(-50%)",
+            width: "auto",
+            pb: 4,
+            alignSelf: "center",
           }}
           centerMode
-          sx={{ transform: `translateY(-50%)`, height: 300 }}
+          sx={{
+            transform: `translateY(-50%)`,
+            height: 300,
+          }}
+          outerSx={{ display: "flex", flexDirection: "column" }}
         >
           {props.slidesData.slides.map((slide) => (
             <Box
