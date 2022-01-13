@@ -8,6 +8,7 @@ import {
   useImperativeHandle,
   useMemo,
   useRef,
+  useState,
 } from "react";
 import { useCycledList } from "./use-cycled-list";
 import { Box, css, styled, SxProps } from "@mui/material";
@@ -16,6 +17,7 @@ import { SizeMe, SizeMeProps } from "react-sizeme";
 import { range } from "lodash";
 
 const Bullet = styled(Box)<{ isActive: boolean }>`
+  cursor: pointer;
   height: 0.7rem;
   width: 0.7rem;
   border-radius: 50%;
@@ -60,6 +62,8 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
       outerSx,
       gap = 16,
     } = props;
+    const [speed, setSpeed] = useState(props.speed);
+    const [step, setStep] = useState(1);
     const [newChildren, prev, next, { current, direction }] = useCycledList(
       Children.toArray(props.children) as unknown as ReactElement[],
       {
@@ -83,11 +87,11 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
 
     const intervalRef = useRef<NodeJS.Timeout>();
     useEffect(() => {
-      if (props.speed) intervalRef.current = setInterval(next, props.speed);
+      if (speed) intervalRef.current = setInterval(() => next(), speed);
       return () => {
         if (intervalRef.current) clearInterval(intervalRef.current);
       };
-    }, [props.speed, next]);
+    }, [speed, next]);
 
     const slideWidth = useMemo(() => {
       const totalGap = gap * (props.slidesToShow - 1);
@@ -197,7 +201,30 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
             }}
           >
             {range(props.slidesToShow).map((index) => (
-              <Bullet isActive={index === current} />
+              <Bullet
+                isActive={index === current}
+                onClick={() => {
+                  if (current === index) return;
+                  setSpeed(0);
+                  if (current < index) {
+                    //next n step
+
+                    setStep(index - current);
+                    next(index - current);
+                    setTimeout(() => {
+                      setSpeed(props.speed);
+                      setStep(1);
+                    }, (index - current + 1) * (animationSpeed ?? 550));
+                  } else {
+                    setStep(current - index);
+                    prev(current - index);
+                    setTimeout(() => {
+                      setSpeed(props.speed);
+                      setStep(1);
+                    }, (current - index + 1) * (animationSpeed ?? 550));
+                  }
+                }}
+              />
             ))}
           </Box>
         </Box>

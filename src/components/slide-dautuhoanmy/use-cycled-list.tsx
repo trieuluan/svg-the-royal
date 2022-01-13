@@ -8,11 +8,12 @@ import {
   useState,
 } from "react";
 import produce, { Draft } from "immer";
+import { range } from "lodash";
 
 export type UseCycledListOptions = {
   size: number;
 };
-type Callback = () => void;
+type Callback = (step?: number) => void;
 export function useCycledList<T extends ReactElement>(
   list: T[],
   { size }: UseCycledListOptions
@@ -36,30 +37,42 @@ export function useCycledList<T extends ReactElement>(
     return rs;
   }, [pos, size, list.length]);
 
-  const next = useCallback(() => {
-    const newPos = (pos + 1) % doubledList.current.length;
-    const newReturnedList = produce(returnedList, (draft) => {
-      draft.shift();
-      draft.push(doubledList.current[newPos] as unknown as Draft<T>);
-    });
-    setDirection("next");
-    setPos(newPos);
-    setReturnedList(newReturnedList);
-  }, [returnedList, pos]);
+  const next = useCallback(
+    (step: number = 1) => {
+      const newPos = (pos + step) % doubledList.current.length;
+      const newReturnedList = produce(returnedList, (draft) => {
+        range(step).forEach(() => draft.shift());
+        range(step).forEach((i: number) => {
+          const _newPos = (pos + i + 1) % doubledList.current.length;
+          draft.push(doubledList.current[_newPos] as unknown as Draft<T>);
+        });
+      });
+      setDirection("next");
+      setPos(newPos);
+      setReturnedList(newReturnedList);
+    },
+    [returnedList, pos]
+  );
 
-  const previous = useCallback(() => {
-    let newPos = pos - 1;
-    if (newPos < 0) newPos += doubledList.current.length;
-    let headPos = newPos - size;
-    if (headPos < 0) headPos += doubledList.current.length;
-    const newReturnedList = produce(returnedList, (draft) => {
-      draft.pop();
-      draft.unshift(doubledList.current[headPos] as unknown as Draft<T>);
-    });
-    setDirection("prev");
-    setPos(newPos);
-    setReturnedList(newReturnedList);
-  }, [pos, size, returnedList]);
+  const previous = useCallback(
+    (step: number = 1) => {
+      let newPos = pos - step;
+      if (newPos < 0) newPos += doubledList.current.length;
+      let headPos = pos - size;
+      const newReturnedList = produce(returnedList, (draft) => {
+        range(step).forEach(() => draft.pop());
+        range(step).forEach(() => {
+          headPos--;
+          if (headPos < 0) headPos += doubledList.current.length;
+          draft.unshift(doubledList.current[headPos] as unknown as Draft<T>);
+        });
+      });
+      setDirection("prev");
+      setPos(newPos);
+      setReturnedList(newReturnedList);
+    },
+    [pos, size, returnedList]
+  );
 
   return [
     returnedList,
