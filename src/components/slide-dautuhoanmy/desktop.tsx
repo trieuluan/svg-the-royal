@@ -6,7 +6,8 @@ import useWindowDimensions from "../commons/responsives";
 import MotionSlide from "./motion-slide";
 import "./raleway.css";
 import Gallery from "./gallery";
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { range } from "lodash";
 
 type DesktopProps = {
   slidesData: HoanMySlidesData;
@@ -49,7 +50,21 @@ const StyledText = styled(Typography)`
 
 export default function Desktop(props: DesktopProps): JSX.Element {
   const { width, height } = useWindowDimensions(),
-    [showGallery, setShowGallery] = useState(false);
+    [showGallery, setShowGallery] = useState(-1);
+
+  const gallerySlideData = useMemo(() => {
+    const slideData = [...props.slidesData.slides];
+    if (showGallery < 0) return { slides: slideData };
+    range(showGallery).forEach(() => {
+      const last = slideData.shift()!;
+      slideData.push(last);
+    });
+    console.log(slideData.length);
+    return { slides: slideData };
+  }, [props.slidesData, showGallery]);
+
+  console.log(showGallery);
+
   return (
     <Box
       sx={{
@@ -84,7 +99,7 @@ export default function Desktop(props: DesktopProps): JSX.Element {
       >
         <MotionSlide
           slidesToShow={5}
-          speed={showGallery ? 0 : 3000}
+          speed={showGallery >= 0 ? 0 : 3000}
           animationSpeed={0.6}
           indicatorSxProps={{
             width: "auto",
@@ -98,12 +113,12 @@ export default function Desktop(props: DesktopProps): JSX.Element {
           }}
           outerSx={{ display: "flex", flexDirection: "column" }}
         >
-          {props.slidesData.slides.map((slide) => (
+          {props.slidesData.slides.map((slide, index) => (
             <Box
               key={slide.id}
               data-key={slide.id}
               sx={{ position: "relative", cursor: "pointer" }}
-              onClick={() => setShowGallery(true)}
+              onClick={() => setShowGallery(index - 1)}
             >
               <AspectRatio ratio={"4/3"}>
                 <img src={slide.params.bg.image} />
@@ -121,12 +136,14 @@ export default function Desktop(props: DesktopProps): JSX.Element {
             </Box>
           ))}
         </MotionSlide>
-        <Gallery
-          open={showGallery}
-          slidesData={props.slidesData}
-          initial={1}
-          onClose={() => setShowGallery(false)}
-        />
+        {showGallery >= 0 && (
+          <Gallery
+            open={true}
+            slidesData={gallerySlideData}
+            initial={1}
+            onClose={() => setShowGallery(-1)}
+          />
+        )}
       </Box>
     </Box>
   );

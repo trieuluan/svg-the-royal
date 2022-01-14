@@ -42,6 +42,7 @@ type MotionSlideProps = PropsWithChildren<
     sx?: SxProps;
     outerSx?: SxProps;
     gap?: number;
+    initial?: number;
   } & SizeMeProps
 >;
 
@@ -55,7 +56,7 @@ const MotionBox = m(Box);
 const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
   function MotionSlide(props, ref): JSX.Element {
     const {
-      animationSpeed = 0.55,
+      animationSpeed = 0.35,
       indicatorSxProps,
       centerMode,
       sx,
@@ -76,9 +77,9 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
       prev,
     }));
 
-    useEffect(() => {
-      console.log(newChildren.map((c) => c.key));
-    }, [newChildren]);
+    // useEffect(() => {
+    //   console.log(newChildren.map((c) => c.key));
+    // }, [newChildren]);
 
     const center = useMemo(
       () => Math.round((props.slidesToShow + 1) / 2),
@@ -87,7 +88,14 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
 
     const intervalRef = useRef<NodeJS.Timeout>();
     useEffect(() => {
+      setSpeed(props.speed);
+    }, [props.speed]);
+    useEffect(() => {
       if (speed) intervalRef.current = setInterval(() => next(), speed);
+      else {
+        if (intervalRef.current) clearInterval(intervalRef.current);
+        intervalRef.current = undefined;
+      }
       return () => {
         if (intervalRef.current) clearInterval(intervalRef.current);
       };

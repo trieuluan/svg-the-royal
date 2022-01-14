@@ -161,7 +161,7 @@ export default function Gallery({
             outerSx={{ pb: 2 }}
           >
             {slidesData.slides.map((slide) => (
-              <Box key={slide.id} sx={{ height: "15vh" }}>
+              <Box key={`${slide.id}-thumb`} sx={{ height: "15vh" }}>
                 <AspectRatio ratio={"4/3"}>
                   <img src={slide.params.bg.image} />
                 </AspectRatio>
