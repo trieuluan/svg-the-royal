@@ -1,12 +1,29 @@
 import { SlideTienIchProps } from "./types";
 import useWindowDimensions from "../commons/responsives";
-import { Box } from "@mui/material";
-import MotionSlide from "../slide-dautuhoanmy/motion-slide";
+import { Box, styled } from "@mui/material";
+import MotionSlide, {
+  MotionSlideHandle,
+} from "../slide-dautuhoanmy/motion-slide";
 import AspectRatio from "../commons/AspectRatio";
 import logo from "./logo.webp";
+import { useRef } from "react";
+import { m } from "framer-motion";
+import GoldTypography from "../commons/GoldTypography";
+
+const MotionTypo = m(styled(GoldTypography)`
+  filter: brightness(90%);
+  font-family: Baskvill, serif;
+  position: fixed;
+  left: 5vw;
+  bottom: 8vh;
+  font-size: 40vh;
+`);
 
 export default function Desktop({ list }: SlideTienIchProps): JSX.Element {
   const { width, height } = useWindowDimensions();
+
+  const ref = useRef<MotionSlideHandle>(null);
+
   return (
     <>
       <Box
@@ -21,6 +38,7 @@ export default function Desktop({ list }: SlideTienIchProps): JSX.Element {
         }}
       >
         <MotionSlide
+          ref={ref}
           slidesToShow={1}
           speed={3000}
           animationSpeed={0.6}
@@ -30,6 +48,19 @@ export default function Desktop({ list }: SlideTienIchProps): JSX.Element {
             alignSelf: "center",
           }}
           outerSx={{ display: "flex", flexDirection: "column" }}
+          gap={0}
+          render={(payload) => (
+            //@ts-ignore
+            <MotionTypo
+              key={payload.actualCurrent}
+              transition={{ duration: 0.6 }}
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "-100%", opacity: 0 }}
+            >
+              {list[payload.actualCurrent].title1}
+            </MotionTypo>
+          )}
         >
           {list.map((item, index) => (
             <AspectRatio

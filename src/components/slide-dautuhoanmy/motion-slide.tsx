@@ -4,6 +4,7 @@ import {
   forwardRef,
   PropsWithChildren,
   ReactElement,
+  ReactNode,
   useCallback,
   useEffect,
   useImperativeHandle,
@@ -11,7 +12,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { useCycledList } from "./use-cycled-list";
+import { CycledListPayload, useCycledList } from "./use-cycled-list";
 import { Box, css, styled, SxProps } from "@mui/material";
 import { AnimatePresence, m } from "framer-motion";
 import { SizeMe, SizeMeProps } from "react-sizeme";
@@ -44,6 +45,7 @@ type MotionSlideProps = PropsWithChildren<
     outerSx?: SxProps;
     gap?: number;
     initial?: number;
+    render?: (payload: CycledListPayload) => ReactNode;
   } & SizeMeProps
 >;
 
@@ -63,16 +65,21 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
       sx,
       outerSx,
       gap = 16,
+      render,
     } = props;
     const [speed, setSpeed] = useState(props.speed);
     const [step, setStep] = useState(1);
-    const [newChildren, prev, next, { current, direction, total }] =
-      useCycledList(
+    const [newChildren, prev, next, payload] = useCycledList(
         Children.toArray(props.children) as unknown as ReactElement[],
         {
           size: props.slidesToShow + 2,
         }
-      );
+      ),
+      { current, direction, total } = payload;
+
+    useEffect(() => {
+      console.log(current);
+    }, [current]);
 
     useImperativeHandle(ref, () => ({
       next,
@@ -232,6 +239,7 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
                 </MotionBox>
               );
             })}
+            {render?.(payload)}
           </AnimatePresence>
         </Box>
         <Box sx={indicatorSxProps}>

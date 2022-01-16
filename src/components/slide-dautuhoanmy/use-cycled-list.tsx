@@ -9,20 +9,23 @@ import {
 } from "react";
 import produce, { Draft } from "immer";
 import { range } from "lodash";
+import { mod } from "../commons/utils";
 
 export type UseCycledListOptions = {
   size: number;
 };
 type Callback = (step?: number) => void;
+export type CycledListPayload = {
+  current: number;
+  actualCurrent: number;
+  direction: "prev" | "next";
+  total: number;
+};
+
 export function useCycledList<T extends ReactElement>(
   list: T[],
   { size }: UseCycledListOptions
-): [
-  T[],
-  Callback,
-  Callback,
-  { current: number; direction: "prev" | "next"; total: number }
-] {
+): [T[], Callback, Callback, CycledListPayload] {
   const doubledList = useRef([
     ...list,
     ...(Children.map(list, (child, i) =>
@@ -85,6 +88,7 @@ export function useCycledList<T extends ReactElement>(
     next,
     {
       current: middle,
+      actualCurrent: mod(middle - 1, size),
       direction,
       total: list.length,
     },
