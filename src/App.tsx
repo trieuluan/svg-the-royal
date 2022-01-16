@@ -8,6 +8,7 @@ import SecondSlide from "./components/SecondSlide/SecondSlide";
 import Slide3 from "./components/Slide3";
 import SlideDautuhoanmy from "./components/slide-dautuhoanmy";
 import { hoanmyDemo } from "./components/assets/hoanmy";
+import SlideTienIch from "./components/slide-tien-ich";
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
             path={"dau-tu-hoan-my"}
             element={<SlideDautuhoanmy slidesData={hoanmyDemo} mode={"demo"} />}
           />
+          <Route path={"tien-ich"} element={<SlideTienIch list={[]} />} />
         </Routes>
       </HashRouter>
     </LazyMotion>
