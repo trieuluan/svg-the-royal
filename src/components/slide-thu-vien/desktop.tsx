@@ -1,10 +1,10 @@
-import { SlideTienIchProps } from "./types";
+import { SlideThuVienProps } from "./types";
 import useWindowDimensions from "../commons/responsives";
 import { Box } from "@mui/material";
 import MotionSlide from "../slide-dautuhoanmy/motion-slide";
 import AspectRatio from "../commons/AspectRatio";
 
-export default function Desktop({ list }: SlideTienIchProps): JSX.Element {
+export default function Desktop({ list }: SlideThuVienProps): JSX.Element {
   const { width, height } = useWindowDimensions();
   return (
     <>

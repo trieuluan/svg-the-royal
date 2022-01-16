@@ -10,6 +10,8 @@ import SlideDautuhoanmy from "./components/slide-dautuhoanmy";
 import { hoanmyDemo } from "./components/assets/hoanmy";
 import SlideTienIch from "./components/slide-tien-ich";
 import { demo as tienIchDemo } from "./components/slide-tien-ich/demo";
+import SlideThuVien from "./components/slide-thu-vien";
+import { demo as ThuVienDemo } from "./components/slide-thu-vien/demo";
 
 function App() {
   useEffect(() => {
@@ -33,6 +35,10 @@ function App() {
           <Route
             path={"tien-ich"}
             element={<SlideTienIch list={tienIchDemo} />}
+          />
+          <Route
+            path={"thu-vien"}
+            element={<SlideThuVien list={ThuVienDemo} />}
           />
         </Routes>
       </HashRouter>

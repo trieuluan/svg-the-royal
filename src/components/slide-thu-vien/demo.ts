@@ -1,8 +1,8 @@
-import { SlideTienIchData } from "./types";
+import { SlideThuVienData } from "./types";
 import bg from "./bg-desktop.webp";
 import bg2 from "./bg2-desktop.webp";
 
-export const demo: SlideTienIchData[] = [
+export const demo: SlideThuVienData[] = [
   {
     id: 1,
     image: bg,

@@ -8,6 +8,8 @@ import SlideDautuhoanmy from "./components/slide-dautuhoanmy";
 import { HoanMySlidesData } from "./components/assets/hoanmy";
 import SlideTienIch from "./components/slide-tien-ich";
 import { SlideTienIchData } from "./components/slide-tien-ich/types";
+import SlideThuVien from "./components/slide-thu-vien";
+import { SlideThuVienData } from "./components/slide-thu-vien/types";
 
 (
   [
@@ -38,6 +40,19 @@ import { SlideTienIchData } from "./components/slide-tien-ich/types";
             JSON.parse(
               document.getElementById("__SLIDE_TIEN_ICH__")!.textContent!
             ) as unknown as SlideTienIchData[]
+          }
+        />
+      ),
+    ],
+    [
+      "svg-animation-thu-vien",
+      () => (
+        <SlideThuVien
+          list={
+            // @ts-ignore
+            JSON.parse(
+              document.getElementById("__SLIDE_THU_VIEN__")!.textContent!
+            ) as unknown as SlideThuVienData[]
           }
         />
       ),
