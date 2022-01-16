@@ -3,6 +3,7 @@ import useWindowDimensions from "../commons/responsives";
 import { Box } from "@mui/material";
 import MotionSlide from "../slide-dautuhoanmy/motion-slide";
 import AspectRatio from "../commons/AspectRatio";
+import logo from "./logo.webp";
 
 export default function Desktop({ list }: SlideTienIchProps): JSX.Element {
   const { width, height } = useWindowDimensions();
@@ -38,9 +39,27 @@ export default function Desktop({ list }: SlideTienIchProps): JSX.Element {
               ratio={`${width}/${height}`}
             >
               <img src={item.image} />
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  bgcolor: "rgba(0,0,0,.59)",
+                }}
+              />
             </AspectRatio>
           ))}
         </MotionSlide>
+        <Box
+          position={"absolute"}
+          sx={{ top: "2rem", left: "2rem", width: "10vw" }}
+        >
+          <AspectRatio ratio={"209.38/152.38"}>
+            <img src={logo} />
+          </AspectRatio>
+        </Box>
       </Box>
     </>
   );
