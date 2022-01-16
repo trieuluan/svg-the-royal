@@ -66,12 +66,13 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
     } = props;
     const [speed, setSpeed] = useState(props.speed);
     const [step, setStep] = useState(1);
-    const [newChildren, prev, next, { current, direction }] = useCycledList(
-      Children.toArray(props.children) as unknown as ReactElement[],
-      {
-        size: props.slidesToShow + 2,
-      }
-    );
+    const [newChildren, prev, next, { current, direction, total }] =
+      useCycledList(
+        Children.toArray(props.children) as unknown as ReactElement[],
+        {
+          size: props.slidesToShow + 2,
+        }
+      );
 
     useImperativeHandle(ref, () => ({
       next,
@@ -147,7 +148,7 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
           animate: ({ index }: { index: number }) => ({
             // display: "block",
             width: slideWidth,
-            scale: isCenter(index) ? 1.8 : 1,
+            scale: isCenter(index) ? 2 : 1,
           }),
           exit: {
             // display: "none",
@@ -237,11 +238,11 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
           <Box
             sx={{
               display: "grid",
-              gridTemplateColumns: `repeat(${props.slidesToShow},1fr)`,
+              gridTemplateColumns: `repeat(${total},1fr)`,
               gridGap: "2rem",
             }}
           >
-            {range(props.slidesToShow).map((index) => (
+            {range(total).map((index) => (
               <Bullet
                 isActive={index === current}
                 onClick={() => {

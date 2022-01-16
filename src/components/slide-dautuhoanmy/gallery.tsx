@@ -149,6 +149,7 @@ export default function Gallery({
         </Box>
         <Box
           sx={{
+            display: "none",
             height: "15vh",
             width: `${20 * slidesData.slides.length}vh`,
             alignSelf: "center",

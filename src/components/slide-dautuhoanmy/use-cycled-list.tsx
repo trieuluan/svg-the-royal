@@ -17,7 +17,12 @@ type Callback = (step?: number) => void;
 export function useCycledList<T extends ReactElement>(
   list: T[],
   { size }: UseCycledListOptions
-): [T[], Callback, Callback, { current: number; direction: "prev" | "next" }] {
+): [
+  T[],
+  Callback,
+  Callback,
+  { current: number; direction: "prev" | "next"; total: number }
+] {
   const doubledList = useRef([
     ...list,
     ...(Children.map(list, (child, i) =>
@@ -81,6 +86,7 @@ export function useCycledList<T extends ReactElement>(
     {
       current: middle,
       direction,
+      total: list.length,
     },
   ];
 }
