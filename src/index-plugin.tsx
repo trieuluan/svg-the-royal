@@ -16,6 +16,7 @@ import { HoanMySlidesData } from "./components/assets/hoanmy";
       "svg-animation-dau-tu-hoan-my",
       () => (
         <SlideDautuhoanmy
+          mode={"live"}
           slidesData={
             // @ts-ignore
             JSON.parse(

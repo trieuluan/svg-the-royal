@@ -59,11 +59,8 @@ export default function Desktop(props: DesktopProps): JSX.Element {
       const last = slideData.shift()!;
       slideData.push(last);
     });
-    console.log(slideData.length);
     return { slides: slideData };
   }, [props.slidesData, showGallery]);
-
-  console.log(showGallery);
 
   return (
     <Box
@@ -117,6 +114,7 @@ export default function Desktop(props: DesktopProps): JSX.Element {
             <Box
               key={slide.id}
               data-key={slide.id}
+              data-index={index}
               sx={{ position: "relative", cursor: "pointer" }}
               onClick={() => setShowGallery(index - 1)}
             >

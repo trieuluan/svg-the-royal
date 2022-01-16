@@ -26,7 +26,7 @@ function App() {
           <Route path={"3"} element={<Slide3 />} />
           <Route
             path={"dau-tu-hoan-my"}
-            element={<SlideDautuhoanmy slidesData={hoanmyDemo} />}
+            element={<SlideDautuhoanmy slidesData={hoanmyDemo} mode={"demo"} />}
           />
         </Routes>
       </HashRouter>

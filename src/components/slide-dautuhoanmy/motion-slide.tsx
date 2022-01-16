@@ -1,5 +1,6 @@
 import {
   Children,
+  cloneElement,
   forwardRef,
   PropsWithChildren,
   ReactElement,
@@ -156,6 +157,30 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
         [isCenter, slideWidth]
       );
 
+    const goToIndex = (index: number, forwardOnly = false) => {
+      if (current === index) return;
+      let _index = index;
+      if (forwardOnly && current >= index) _index += props.slidesToShow;
+      setSpeed(0);
+      if (current < _index) {
+        //next n step
+
+        setStep(_index - current);
+        next(_index - current);
+        setTimeout(() => {
+          setSpeed(props.speed);
+          setStep(1);
+        }, (_index - current + 1) * (animationSpeed ?? 550));
+      } else {
+        setStep(current - _index);
+        prev(current - _index);
+        setTimeout(() => {
+          setSpeed(props.speed);
+          setStep(1);
+        }, (current - _index + 1) * (animationSpeed ?? 550));
+      }
+    };
+
     return (
       <Box sx={outerSx}>
         <Box
@@ -193,7 +218,15 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
                       width: slideWidth,
                     }}
                   >
-                    {child}
+                    {cloneElement(child, {
+                      onClick:
+                        child.props["data-index"] * 1 === center
+                          ? child.props.onClick
+                          : () => {
+                              console.log(child.props["data-index"] * 1);
+                              goToIndex(child.props["data-index"] * 1, true);
+                            },
+                    })}
                   </MotionBox>
                 </MotionBox>
               );
@@ -212,25 +245,7 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
               <Bullet
                 isActive={index === current}
                 onClick={() => {
-                  if (current === index) return;
-                  setSpeed(0);
-                  if (current < index) {
-                    //next n step
-
-                    setStep(index - current);
-                    next(index - current);
-                    setTimeout(() => {
-                      setSpeed(props.speed);
-                      setStep(1);
-                    }, (index - current + 1) * (animationSpeed ?? 550));
-                  } else {
-                    setStep(current - index);
-                    prev(current - index);
-                    setTimeout(() => {
-                      setSpeed(props.speed);
-                      setStep(1);
-                    }, (current - index + 1) * (animationSpeed ?? 550));
-                  }
+                  goToIndex(index);
                 }}
               />
             ))}

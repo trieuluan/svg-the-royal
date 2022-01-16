@@ -1,4 +1,5 @@
 import { styled, Typography } from "@mui/material";
+import "./fonts.css";
 
 const GoldTypography = styled(Typography)`
   background: linear-gradient(

@@ -9,6 +9,7 @@ const Desktop = loadable(() => import("./desktop")),
 
 type SlideDautuhoanmyProps = {
   slidesData: HoanMySlidesData;
+  mode: "demo" | "live";
 };
 export default function SlideDautuhoanmy(
   props: SlideDautuhoanmyProps
@@ -20,9 +21,11 @@ export default function SlideDautuhoanmy(
       newSlide.layers = {
         0: Object.values(newSlide.layers).filter((l) => l.text?.length > 0)[0]!,
       };
+      if (props.mode === "live")
+        newSlide.params.bg.image = `https://demo.digityze.asia/theroyal/wp-content/${newSlide.params.bg.image}`;
       return newSlide;
     });
     return rs;
-  }, [props.slidesData]);
+  }, [props.mode, props.slidesData]);
   return <Responsive d={Desktop} m={Mobile} slidesData={slidesData} />;
 }
