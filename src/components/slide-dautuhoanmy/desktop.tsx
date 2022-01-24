@@ -1,13 +1,13 @@
 import { HoanMySlidesData } from "../assets/hoanmy";
 import { Box, styled, Typography } from "@mui/material";
 import bg from "./bg-desktop.webp";
-import { AspectRatio } from "@hungphongbk/vth-sdk";
 import useWindowDimensions from "../commons/responsives";
 import MotionSlide from "./motion-slide";
 import "./raleway.css";
 import Gallery from "./gallery";
 import { useMemo, useState } from "react";
 import { range } from "lodash";
+import AspectRatio from "../commons/AspectRatio";
 
 type DesktopProps = {
   slidesData: HoanMySlidesData;

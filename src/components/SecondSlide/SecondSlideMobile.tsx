@@ -1,6 +1,5 @@
 import background from "./Slide2Mobile.webp";
 import { Box } from "@mui/material";
-import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
 import { SlideContext } from "./Context";
 import { useState } from "react";
 import { SlideLabel } from "./common";
@@ -11,6 +10,7 @@ import FourthLabelMobile from "./FourthLabelMobile";
 import FifthLabelMobile from "./FifthLabelMobile";
 import SixthLabelMobile from "./SixthLabelMobile";
 import AspectRatio from "../commons/AspectRatio";
+import { sxFullSize } from "../commons/predefinedSx";
 // import part1 from './Slide2Part1.svg';
 
 const getXSize = (w: number) => `${w / 4.14}%`,

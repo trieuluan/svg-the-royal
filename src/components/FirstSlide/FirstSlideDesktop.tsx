@@ -11,8 +11,8 @@ import Content from "./Content";
 import { tlwh } from "../SecondSlide/SecondSlideDesktop";
 import AspectRatio from "../commons/AspectRatio";
 import FirstSlideContent from "./FirstSlideContent";
-import { sxFullSizeAbsolute } from "@hungphongbk/vth-sdk/utils/predefinedSx";
 import { useMemo } from "react";
+import { sxFullSizeAbsolute } from "../commons/predefinedSx";
 
 const StyledAspectRatio = styled(AspectRatio)`
   @keyframes StrokeLine {

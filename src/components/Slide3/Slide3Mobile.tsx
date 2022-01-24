@@ -2,11 +2,11 @@ import { Box, Stack } from "@mui/material";
 import background from "./bg-mobile.webp";
 import { tlwhM } from "./utils";
 import ContentDesktop from "./ContentDesktop";
-import { sxFullSize } from "@hungphongbk/vth-sdk/utils/predefinedSx";
 import AspectRatio from "../commons/AspectRatio";
 import { m } from "framer-motion";
 import text1desktop from "./text-1-mobile.png";
 import text2desktop from "./text-2-mobile.png";
+import { sxFullSize } from "../commons/predefinedSx";
 
 const container = {
   hidden: {},

@@ -8,11 +8,11 @@ import {
 } from "@mui/material";
 import { HoanMySlidesData } from "../assets/hoanmy";
 import MotionSlide, { MotionSlideHandle } from "./motion-slide";
-import { AspectRatio } from "@hungphongbk/vth-sdk";
 import NextIcon from "./next-icon";
 import PrevIcon from "./prev-icon";
 import { useEffect, useRef, useState } from "react";
 import CloseIcon from "./close-icon";
+import AspectRatio from "../commons/AspectRatio";
 
 const CaptionBox = styled(Box)`
   p {

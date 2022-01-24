@@ -2,11 +2,11 @@ import { Box, styled, Typography } from "@mui/material";
 import useWindowDimensions from "../commons/responsives";
 import { useMemo, useState } from "react";
 import { range } from "lodash";
-import { AspectRatio } from "@hungphongbk/vth-sdk";
 import bg from "./bg-mobile.webp";
 import MotionSlide from "./motion-slide";
 import Gallery from "./gallery";
 import { HoanMySlidesData } from "../assets/hoanmy";
+import AspectRatio from "../commons/AspectRatio";
 
 type MobileProps = {
   slidesData: HoanMySlidesData;
