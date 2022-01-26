@@ -78,7 +78,7 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
       { current, direction, total } = payload;
 
     useEffect(() => {
-      console.log(current);
+      // console.log(current);
     }, [current]);
 
     useImperativeHandle(ref, () => ({
@@ -172,7 +172,6 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
       setSpeed(0);
       if (current < _index) {
         //next n step
-
         setStep(_index - current);
         next(_index - current);
         setTimeout(() => {
@@ -231,7 +230,7 @@ const MotionSlideInner = forwardRef<MotionSlideHandle, MotionSlideProps>(
                         child.props["data-index"] * 1 === center
                           ? child.props.onClick
                           : () => {
-                              console.log(child.props["data-index"] * 1);
+                              // console.log(child.props["data-index"] * 1);
                               goToIndex(child.props["data-index"] * 1, true);
                             },
                     })}

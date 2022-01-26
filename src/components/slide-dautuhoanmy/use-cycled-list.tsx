@@ -37,7 +37,6 @@ export function useCycledList<T extends ReactElement>(
     ),
     [pos, setPos] = useState(size - 1),
     [direction, setDirection] = useState<"prev" | "next">("next");
-
   const middle = useMemo(() => {
     let rs = pos - (size - 1) / 2;
     if (rs < 0) rs += list.length;

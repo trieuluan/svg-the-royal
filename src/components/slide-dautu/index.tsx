@@ -1,8 +1,12 @@
 import { Responsive } from "../commons/responsives";
-import loadable from "@loadable/component";
-import { HoanMySlidesData } from "../assets/hoanmy";
 import { useMemo } from "react";
 import { cloneDeep } from "lodash";
+import { HoanMySlidesData } from "../assets/hoanmy";
+import loadable from "@loadable/component";
+// Import css files
+import "../commons/fonts.css";
+import "swiper/swiper.min.css";
+import "swiper/modules/pagination/pagination.min.css";
 
 const Desktop = loadable(() => import("./desktop")),
   Mobile = loadable(() => import("./mobile"));
@@ -11,9 +15,8 @@ type SlideDautuhoanmyProps = {
   slidesData: HoanMySlidesData;
   mode: "demo" | "live";
 };
-export default function SlideDautuhoanmy(
-  props: SlideDautuhoanmyProps
-): JSX.Element {
+
+export default function SlideDautu(props: SlideDautuhoanmyProps): JSX.Element {
   const slidesData = useMemo(() => {
     const rs = cloneDeep(props.slidesData);
     rs.slides = rs.slides.map((slide) => {

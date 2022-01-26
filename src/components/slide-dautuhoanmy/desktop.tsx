@@ -96,7 +96,7 @@ export default function Desktop(props: DesktopProps): JSX.Element {
       >
         <MotionSlide
           slidesToShow={5}
-          speed={showGallery >= 0 ? 0 : 3000}
+          speed={showGallery >= 0 ? 0 : 10000}
           animationSpeed={0.6}
           indicatorSxProps={{
             width: "auto",
