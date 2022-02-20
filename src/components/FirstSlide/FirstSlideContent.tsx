@@ -1,10 +1,19 @@
 import { useState } from "react";
-import { Box, Stack, SxProps, Typography } from "@mui/material";
+import { Box, Stack, styled, SxProps, Typography } from "@mui/material";
 import Collapsable from "./Collapsable";
 import XemThemIcon from "./XemThemIcon";
 import ArrowGoldIcon from "./ArrowGoldIcon";
 import "../commons/fonts.css";
 import GoldTypography from "../commons/GoldTypography";
+
+const GoldSecondTypography = styled(GoldTypography)`
+  font-size: 2.8em;
+  font-family: Megante, serif !important;
+  margin-top: -0.5em;
+  @media screen and (max-width: 425px) {
+    font-size: 26px;
+  }
+`;
 
 type RightContentsDesktopProps = { sx: SxProps; isMobile: boolean };
 export default function FirstSlideContent(
@@ -24,15 +33,7 @@ export default function FirstSlideContent(
           >
             Địa Thế Vàng
           </GoldTypography>
-          <GoldTypography
-            sx={{
-              fontFamily: "Megante !important",
-              fontSize: "2.8em",
-              mt: "-.5em",
-            }}
-          >
-            TRÊN ĐẠI LỘ DANH GIÁ
-          </GoldTypography>
+          <GoldSecondTypography>TRÊN ĐẠI LỘ DANH GIÁ</GoldSecondTypography>
         </Box>
         <Typography>
           The Royal Đà Nẵng sở hữu vị trí "3 tốt" trong quan niệm xưa nay của cả

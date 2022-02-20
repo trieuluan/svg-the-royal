@@ -30,5 +30,6 @@ export default function SlideDautu(props: SlideDautuhoanmyProps): JSX.Element {
     });
     return rs;
   }, [props.mode, props.slidesData]);
+  console.log(props);
   return <Responsive d={Desktop} m={Mobile} slidesData={slidesData} />;
 }

@@ -47,6 +47,9 @@ const StyledText = styled(Typography)`
   .center & {
     transform: translateY(-0.5rem) scale(0.75);
   }
+  @media screen and (max-width: 1366px) {
+    font-size: 14px;
+  }
 `;
 
 const StyledImage = styled(Box)<{ ratio?: string | number }>`
@@ -67,16 +70,24 @@ const StyleContent = styled(Box)`
   flex-flow: wrap;
   justify-content: center;
   > .swiper {
-    height: 400px;
+    aspect-ratio: calc(4 / 1);
+    margin: 0 50px;
+    @media screen and (max-width: 1366px) {
+      aspect-ratio: unset;
+    }
     .swiper-slide {
-      height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 200ms linear;
       transform: scale(0.8);
+      width: calc((100% - 395px) / 4) !important;
       &.swiper-slide-active {
         transform: scale(1);
+        width: 450px !important;
+        .item-slide p {
+          font-weight: bold;
+        }
       }
       .item-slide {
         text-align: center;
@@ -91,6 +102,7 @@ const StyleContent = styled(Box)`
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 2rem;
       justify-content: center;
+      bottom: 20px;
       .swiper-pagination-bullet {
         background-color: transparent;
         transition: all 0.3s ease-in-out;
@@ -118,7 +130,7 @@ const StyleContent = styled(Box)`
 const TitleText = styled(Typography)`
   text-transform: uppercase;
   font-family: Megante;
-  font-size: 48px;
+  font-size: 65px;
   position: relative;
   background: -webkit-linear-gradient(
     248deg,
@@ -130,13 +142,15 @@ const TitleText = styled(Typography)`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin-top: 150px;
-  margin-bottom: 100px;
+  margin: 50px 0;
+  @media screen and (max-width: 1366px) {
+    margin: 50px 0;
+  }
 `;
 
 const SpecialText = styled(Typography)`
   font-family: Rosellinda;
-  font-size: 78px;
+  font-size: 85px;
   text-transform: initial;
   display: inline-block;
 `;
@@ -164,7 +178,7 @@ export default function Desktop(props: DesktopProps): JSX.Element {
           right: 0,
         }}
       >
-        <AspectRatio ratio={`${width}/${(height * 2) / 3.5}`}>
+        <AspectRatio ratio={`${width}/${height / 2}`}>
           <Bg src={bg} />
         </AspectRatio>
       </BgBox>
@@ -177,8 +191,6 @@ export default function Desktop(props: DesktopProps): JSX.Element {
           </TitleText>
           <Swiper
             slidesPerView={5}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
             centeredSlides={true}
             loop={true}
             pagination={{
@@ -187,6 +199,14 @@ export default function Desktop(props: DesktopProps): JSX.Element {
             autoplay={{
               delay: 5000,
               pauseOnMouseEnter: true,
+            }}
+            breakpoints={{
+              1440: {
+                slidesPerView: 5,
+              },
+              768: {
+                slidesPerView: 3,
+              },
             }}
           >
             {props.slidesData.slides.map((slide, index) => (
