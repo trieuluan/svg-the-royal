@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styled } from "@mui/material";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-const XemThem = styled("div")`
+const XemThem = styled("a")`
   svg {
     margin-left: 10px;
     display: none;
@@ -38,11 +38,13 @@ const XemThem = styled("div")`
   font-weight: 500;
   cursor: pointer;
   margin-top: 0.7em;
+  display: inline-block;
+  text-decoration: none;
 `;
 
 export default function XemThemIcon() {
   return (
-    <XemThem>
+    <XemThem href="/vi-tri">
       XEM THÊM
       <FontAwesomeIcon icon={faChevronRight} />
     </XemThem>

@@ -44,7 +44,7 @@ module.exports = {
     },
     configure: (webpackConfig, { paths }) => {
       webpackConfig.output.publicPath =
-        "/royal/wp-content/plugins/svg-map-animations/build/";
+        "/theroyal/wp-content/plugins/svg-map-animations/build/";
       paths.appBuild = webpackConfig.output.path = path.resolve(
         "svg-map-animations/build"
       );
