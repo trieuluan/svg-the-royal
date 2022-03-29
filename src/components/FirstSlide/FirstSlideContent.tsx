@@ -36,11 +36,7 @@ export default function FirstSlideContent(
           <GoldSecondTypography>TRÊN ĐẠI LỘ DANH GIÁ</GoldSecondTypography>
         </Box>
         <Typography>
-          The Royal Đà Nẵng sở hữu vị trí "3 tốt" trong quan niệm xưa nay của cả
-          Đông - Tây, bao gồm gần các trung tâm thương mại sầm uất, gần sông và
-          nằm trên 3 trục giao thông lớn của thành phố là Bình Minh 5, Bạch
-          Đằng, Nguyễn Công Trứ; vừa giúp thuận tiện cho việc di chuyển, vừa kết
-          nối không gian tiện ích đa chiều.
+          The Royal Đà Nẵng sở hữu vị trí "3 tốt" trong quan niệm xưa nay của cả Đông - Tây, bao gồm gần các trung tâm thương mại sầm uất, gần sông và nằm trên 3 trục giao thông lớn của thành phố là Bình Minh 5, Bạch Đằng, Trần Văn Trứ. Địa thế này vừa giúp thuận tiện cho việc di chuyển, vừa kết nối không gian tiện ích đa chiều.
         </Typography>
         <Box
           sx={{
