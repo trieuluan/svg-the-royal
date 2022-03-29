@@ -1,6 +1,6 @@
 {
-  "name": "@hungphongbk/svg-map-animations",
-  "version": "0.1.6-83",
+  "name": "@trieuluan/svg-the-royal",
+  "version": "0.1.6-86",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -16,6 +16,6 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hungphongbk/svg-map-animations.git"
+    "url": "git+https://github.com/trieuluan/svg-the-royal.git"
   }
 }
