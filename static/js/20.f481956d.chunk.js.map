@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/slide-tien-ich/mobile.tsx"],"names":["Mobile","props"],"mappings":"iLAEe,SAASA,EAAOC,GAC7B,OAAO","file":"static/js/20.f481956d.chunk.js","sourcesContent":["import { SlideTienIchProps } from \"./types\";\r\n\r\nexport default function Mobile(props: SlideTienIchProps): JSX.Element {\r\n  return <></>;\r\n}\r\n"],"sourceRoot":""}
