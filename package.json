@@ -2,10 +2,7 @@
   "name": "svg-the-royal",
   "homepage": "https://trieuluan.github.io/svg-the-royal/",
   "version": "0.1.0",
-  "private": false,
-  "publishConfig": {
-    "@trieuluan:registry": "https://npm.pkg.github.com"
-  },
+  "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",

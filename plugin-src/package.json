@@ -17,5 +17,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trieuluan/svg-the-royal.git"
+  },
+  "publishConfig": {
+    "@trieuluan:registry": "https://npm.pkg.github.com"
   }
 }
