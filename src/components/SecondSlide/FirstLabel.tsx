@@ -9,6 +9,7 @@ export default function FirstLabel(props: FirstLabelProps): JSX.Element {
   return (
     <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
       <Defs />
+      <a href="https://theroyal.vn/mat-bang-chi-tiet/#mat-bang-chi-tiet?active=1">
       <g
         id="Group_550"
         data-name="Group 550"
@@ -47,6 +48,7 @@ export default function FirstLabel(props: FirstLabelProps): JSX.Element {
           transform="translate(686.699 278.279)"
         />
       </g>
+      </a>
     </SvgIcon>
   );
 }

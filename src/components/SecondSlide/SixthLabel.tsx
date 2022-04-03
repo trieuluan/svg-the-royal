@@ -8,6 +8,7 @@ export default function SixthLabel(props: SixthLabelProps): JSX.Element {
   return (
     <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
       <Defs />
+      <a href="https://theroyal.vn/mat-bang-chi-tiet/#mat-bang-chi-tiet?active=6">
       <g
         id="Group_567"
         data-name="Group 567"
@@ -46,6 +47,7 @@ export default function SixthLabel(props: SixthLabelProps): JSX.Element {
           transform="translate(685.225 751.146)"
         />
       </g>
+      </a>
     </SvgIcon>
   );
 }

@@ -31,7 +31,7 @@ export default function FirstSlideContent(
               pl: ".1em",
             }}
           >
-            Địa Thế Vàng
+            Địa Thế
           </GoldTypography>
           <GoldSecondTypography>TRÊN ĐẠI LỘ DANH GIÁ</GoldSecondTypography>
         </Box>

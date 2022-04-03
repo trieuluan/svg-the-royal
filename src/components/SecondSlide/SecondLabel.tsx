@@ -8,6 +8,7 @@ export default function SecondLabel(props: SecondLabelProps): JSX.Element {
   return (
     <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
       <Defs />
+      <a href="https://theroyal.vn/mat-bang-chi-tiet/#mat-bang-chi-tiet?active=2">
       <g
         id="Group_551"
         data-name="Group 551"
@@ -46,6 +47,7 @@ export default function SecondLabel(props: SecondLabelProps): JSX.Element {
           transform="translate(685.225 376.583)"
         />
       </g>
+      </a>
     </SvgIcon>
   );
 }

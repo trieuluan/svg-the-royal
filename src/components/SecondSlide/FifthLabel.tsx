@@ -8,6 +8,7 @@ export default function FifthLabel(props: FifthLabelProps): JSX.Element {
   return (
     <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
       <Defs />
+      <a href="https://theroyal.vn/mat-bang-chi-tiet/#mat-bang-chi-tiet?active=5">
       <g
         id="Group_554"
         data-name="Group 554"
@@ -46,6 +47,7 @@ export default function FifthLabel(props: FifthLabelProps): JSX.Element {
           transform="translate(685.225 650.583)"
         />
       </g>
+      </a>
     </SvgIcon>
   );
 }
