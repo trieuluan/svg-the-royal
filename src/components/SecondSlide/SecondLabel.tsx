@@ -8,8 +8,8 @@ export default function SecondLabel(props: SecondLabelProps): JSX.Element {
   return (
     <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
       <Defs />
-      <a href="https://theroyal.vn/mat-bang-chi-tiet/#mat-bang-chi-tiet?active=2">
-      <g
+      <a href="/mat-bang-chi-tiet/?tab=dich-vu-hoang-kim#mat-bang-chi-tiet">
+      <g //Dịch vụ hoàng kim elementor-tab-title-1455
         id="Group_551"
         data-name="Group 551"
         transform="translate(-179 -320)"

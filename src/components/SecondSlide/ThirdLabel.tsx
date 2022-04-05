@@ -8,8 +8,8 @@ export default function ThirdLabel(props: ThirdLabelProps): JSX.Element {
   return (
     <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
       <Defs />
-      <a href="https://theroyal.vn/mat-bang-chi-tiet/#mat-bang-chi-tiet?active=3">
-      <g
+      <a href="/mat-bang-chi-tiet/?tab=tien-nghi-hoang-kim#mat-bang-chi-tiet">
+      <g //Tiện nghi hoàng kim elementor-tab-title-1454
         id="Group_552"
         data-name="Group 552"
         transform="translate(-179 -412)"
