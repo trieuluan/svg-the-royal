@@ -60,7 +60,7 @@
   },
   "scripts": {
     "tsc": "./node_modules/.bin/tsc",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:win",
     "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "REACT_APP_ENV=web craco build",
