@@ -14,8 +14,8 @@
     "static/js/5.2c1ef2c0.chunk.js.map": "/svg-the-royal/static/js/5.2c1ef2c0.chunk.js.map",
     "main.js": "/svg-the-royal/static/js/main.57aaa77b.chunk.js",
     "main.js.map": "/svg-the-royal/static/js/main.57aaa77b.chunk.js.map",
-    "runtime-main.js": "/svg-the-royal/static/js/runtime-main.4f960029.js",
-    "runtime-main.js.map": "/svg-the-royal/static/js/runtime-main.4f960029.js.map",
+    "runtime-main.js": "/svg-the-royal/static/js/runtime-main.0cf4b53a.js",
+    "runtime-main.js.map": "/svg-the-royal/static/js/runtime-main.0cf4b53a.js.map",
     "static/js/8.09a7449c.chunk.js": "/svg-the-royal/static/js/8.09a7449c.chunk.js",
     "static/js/8.09a7449c.chunk.js.map": "/svg-the-royal/static/js/8.09a7449c.chunk.js.map",
     "static/css/9.7e2a64f4.chunk.css": "/svg-the-royal/static/css/9.7e2a64f4.chunk.css",
@@ -42,8 +42,8 @@
     "static/js/16.cb76b02b.chunk.js.map": "/svg-the-royal/static/js/16.cb76b02b.chunk.js.map",
     "static/js/17.9956b5d1.chunk.js": "/svg-the-royal/static/js/17.9956b5d1.chunk.js",
     "static/js/17.9956b5d1.chunk.js.map": "/svg-the-royal/static/js/17.9956b5d1.chunk.js.map",
-    "static/js/18.ec3ff29b.chunk.js": "/svg-the-royal/static/js/18.ec3ff29b.chunk.js",
-    "static/js/18.ec3ff29b.chunk.js.map": "/svg-the-royal/static/js/18.ec3ff29b.chunk.js.map",
+    "static/js/18.4b13544a.chunk.js": "/svg-the-royal/static/js/18.4b13544a.chunk.js",
+    "static/js/18.4b13544a.chunk.js.map": "/svg-the-royal/static/js/18.4b13544a.chunk.js.map",
     "static/js/19.0e73c15c.chunk.js": "/svg-the-royal/static/js/19.0e73c15c.chunk.js",
     "static/js/19.0e73c15c.chunk.js.map": "/svg-the-royal/static/js/19.0e73c15c.chunk.js.map",
     "static/js/20.f481956d.chunk.js": "/svg-the-royal/static/js/20.f481956d.chunk.js",
@@ -74,7 +74,7 @@
     "static/media/text1-desktop.ab25ac84.webp": "/svg-the-royal/static/media/text1-desktop.ab25ac84.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f960029.js",
+    "static/js/runtime-main.0cf4b53a.js",
     "static/js/8.09a7449c.chunk.js",
     "static/js/main.57aaa77b.chunk.js"
   ]
