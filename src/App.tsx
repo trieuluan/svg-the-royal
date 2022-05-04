@@ -13,6 +13,9 @@ import { demo as tienIchDemo } from "./components/slide-tien-ich/demo";
 import SlideThuVien from "./components/slide-thu-vien";
 import { demo as ThuVienDemo } from "./components/slide-thu-vien/demo";
 import SlideDautu from "./components/slide-dautu";
+import FirstSlideEN from "./components/FirstSlide-EN";
+import SecondSlideEN from "./components/SecondSlide-EN/SecondSlide";
+import Slide3EN from "./components/Slide3-EN";
 
 function App() {
   useEffect(() => {
@@ -27,8 +30,11 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path={"1"} element={<SecondSlide />} />
+          <Route path={"1-en"} element={<SecondSlideEN />} />
           <Route path={"2"} element={<FirstSlide />} />
+          <Route path={"2-en"} element={<FirstSlideEN />} />
           <Route path={"3"} element={<Slide3 />} />
+          <Route path={"3-en"} element={<Slide3EN />} />
           <Route
             path={"dau-tu-hoan-my"}
             element={<SlideDautuhoanmy slidesData={hoanmyDemo} mode={"demo"} />}

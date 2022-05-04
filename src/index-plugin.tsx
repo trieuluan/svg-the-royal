@@ -10,12 +10,18 @@ import SlideTienIch from "./components/slide-tien-ich";
 import { SlideTienIchData } from "./components/slide-tien-ich/types";
 import SlideThuVien from "./components/slide-thu-vien";
 import { SlideThuVienData } from "./components/slide-thu-vien/types";
+import FirstSlideEN from "./components/FirstSlide-EN";
+import SecondSlideEN from "./components/SecondSlide-EN/SecondSlide";
+import Slide3EN from "./components/Slide3-EN";
 
 (
   [
     ["svg-animation-1", SecondSlide],
+    ["svg-animation-1-en", SecondSlideEN],
     ["svg-animation-2", FirstSlide],
+    ["svg-animation-2-en", FirstSlideEN],
     ["svg-animation-3", Slide3],
+    ["svg-animation-3-en", Slide3EN],
     [
       "svg-animation-dau-tu-hoan-my",
       () => (
