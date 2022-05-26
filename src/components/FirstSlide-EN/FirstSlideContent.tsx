@@ -36,7 +36,7 @@ export default function FirstSlideContent(
           <GoldSecondTypography>ICONIC BOULEVARD</GoldSecondTypography>
         </Box>
         <Typography>
-        The Royal Boutique & Condo Danang's location owns "3 good" of the ancient conception both from East to West, including near by hustle & bustle commercial centers and the Han river which  located on 3 major traffic axes of the city such as Binh Minh 5, Bach Dang, Nguyen Cong Tru; it is both convenient for moving and connecting multi-dimensional utility space.
+        The Royal Boutique & Condo Danang's location owns "3 good" of the ancient conception both from East to West, including near by hustle & bustle commercial centers and the Han river which  located on 3 major traffic axes of the city such as Binh Minh 5, Bach Dang, Tran Van Tru; it is both convenient for moving and connecting multi-dimensional utility space.
         </Typography>
         <Box
           sx={{

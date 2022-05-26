@@ -8,7 +8,7 @@ export default function SixthLabel(props: SixthLabelProps): JSX.Element {
   return (
     <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
       <Defs />
-      <a href="/mat-bang-chi-tiet/?tab=thoi-van-hoang-kim#mat-bang-chi-tiet">
+      <a href="/en/mat-bang-chi-tiet/?tab=thoi-van-hoang-kim#mat-bang-chi-tiet">
       <g //elementor-tab-title-1451
         id="Group_567"
         data-name="Group 567"
