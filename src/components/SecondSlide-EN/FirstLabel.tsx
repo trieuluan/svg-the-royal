@@ -9,7 +9,7 @@ export default function FirstLabel(props: FirstLabelProps): JSX.Element {
   return (
     <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
       <Defs />
-      <a href="/mat-bang-chi-tiet/?tab=dinh-song-hoang-kim#mat-bang-chi-tiet">
+      <a href="/en/mat-bang-chi-tiet/?tab=dinh-song-hoang-kim#mat-bang-chi-tiet">
       <g //Đỉnh sống hoàng kim elementor-tab-title-1456
         id="Group_550"
         data-name="Group 550"

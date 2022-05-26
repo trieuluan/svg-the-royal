@@ -9,7 +9,7 @@ export default function FourthLabel(props: FourthLabelProps): JSX.Element {
   return (
     <SvgIcon width="651.813" height="71" viewBox="0 0 651.813 71" {...props}>
       <Defs />
-      <a href="/mat-bang-chi-tiet/?tab=tien-ich-hoang-kim#mat-bang-chi-tiet">
+      <a href="/en/mat-bang-chi-tiet/?tab=tien-ich-hoang-kim#mat-bang-chi-tiet">
       <g //elementor-tab-title-1453
         id="Group_553"
         data-name="Group 553"
