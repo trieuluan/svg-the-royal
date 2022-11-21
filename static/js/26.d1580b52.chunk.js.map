@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/slide-thu-vien/mobile.tsx"],"names":["Mobile","props"],"mappings":"iLAEe,SAASA,EAAOC,GAC7B,OAAO","file":"static/js/26.d1580b52.chunk.js","sourcesContent":["import { SlideThuVienProps } from \"./types\";\r\n\r\nexport default function Mobile(props: SlideThuVienProps): JSX.Element {\r\n  return <></>;\r\n}\r\n"],"sourceRoot":""}

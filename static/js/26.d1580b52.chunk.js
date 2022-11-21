@@ -1,2 +1,0 @@
-(this["webpackJsonpsvg-the-royal"]=this["webpackJsonpsvg-the-royal"]||[]).push([[26],{211:function(t,n,e){"use strict";e.r(n),e.d(n,"default",(function(){return s}));var r=e(3);function s(t){return Object(r.jsx)(r.Fragment,{})}}}]);
-//# sourceMappingURL=26.d1580b52.chunk.js.map
