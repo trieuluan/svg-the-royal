@@ -16,8 +16,8 @@
     "static/js/6.5b90f43c.chunk.js.map": "/svg-the-royal/static/js/6.5b90f43c.chunk.js.map",
     "main.js": "/svg-the-royal/static/js/main.8654d1f4.chunk.js",
     "main.js.map": "/svg-the-royal/static/js/main.8654d1f4.chunk.js.map",
-    "runtime-main.js": "/svg-the-royal/static/js/runtime-main.bf2b6ed2.js",
-    "runtime-main.js.map": "/svg-the-royal/static/js/runtime-main.bf2b6ed2.js.map",
+    "runtime-main.js": "/svg-the-royal/static/js/runtime-main.db359a6f.js",
+    "runtime-main.js.map": "/svg-the-royal/static/js/runtime-main.db359a6f.js.map",
     "static/js/9.5e8dc143.chunk.js": "/svg-the-royal/static/js/9.5e8dc143.chunk.js",
     "static/js/9.5e8dc143.chunk.js.map": "/svg-the-royal/static/js/9.5e8dc143.chunk.js.map",
     "static/css/10.7e2a64f4.chunk.css": "/svg-the-royal/static/css/10.7e2a64f4.chunk.css",
@@ -27,11 +27,11 @@
     "static/js/11.43828389.chunk.js": "/svg-the-royal/static/js/11.43828389.chunk.js",
     "static/js/11.43828389.chunk.js.map": "/svg-the-royal/static/js/11.43828389.chunk.js.map",
     "static/css/12.7e2a64f4.chunk.css": "/svg-the-royal/static/css/12.7e2a64f4.chunk.css",
-    "static/js/12.2c391773.chunk.js": "/svg-the-royal/static/js/12.2c391773.chunk.js",
-    "static/js/12.2c391773.chunk.js.map": "/svg-the-royal/static/js/12.2c391773.chunk.js.map",
+    "static/js/12.f39af1a1.chunk.js": "/svg-the-royal/static/js/12.f39af1a1.chunk.js",
+    "static/js/12.f39af1a1.chunk.js.map": "/svg-the-royal/static/js/12.f39af1a1.chunk.js.map",
     "static/css/13.7e2a64f4.chunk.css": "/svg-the-royal/static/css/13.7e2a64f4.chunk.css",
-    "static/js/13.675fc722.chunk.js": "/svg-the-royal/static/js/13.675fc722.chunk.js",
-    "static/js/13.675fc722.chunk.js.map": "/svg-the-royal/static/js/13.675fc722.chunk.js.map",
+    "static/js/13.51682066.chunk.js": "/svg-the-royal/static/js/13.51682066.chunk.js",
+    "static/js/13.51682066.chunk.js.map": "/svg-the-royal/static/js/13.51682066.chunk.js.map",
     "static/css/14.7e2a64f4.chunk.css": "/svg-the-royal/static/css/14.7e2a64f4.chunk.css",
     "static/js/14.99377fd1.chunk.js": "/svg-the-royal/static/js/14.99377fd1.chunk.js",
     "static/js/14.99377fd1.chunk.js.map": "/svg-the-royal/static/js/14.99377fd1.chunk.js.map",
@@ -96,7 +96,7 @@
     "static/media/text1-desktop.ab25ac84.webp": "/svg-the-royal/static/media/text1-desktop.ab25ac84.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.bf2b6ed2.js",
+    "static/js/runtime-main.db359a6f.js",
     "static/js/9.5e8dc143.chunk.js",
     "static/js/main.8654d1f4.chunk.js"
   ]
